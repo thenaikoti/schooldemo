@@ -132,16 +132,16 @@ export default function ContactPage() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6Leading-tight tracking-tight">Still unsure? Visit our campus and experience it yourself.</h2>
-            <p className="text-xl text-primary-foreground/70 mb-10 leading-relaxed">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight tracking-tight">Still unsure? Visit our campus and experience it yourself.</h2>
+            <p className="text-xl text-primary-foreground/80 mb-12 leading-relaxed">
               We host personalized campus tours every Saturday between 10 AM and 2 PM. Come see our students in action.
             </p>
-            <div className="flex flex-col sm:flex-row gap-5 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link href="#enquiry">
-                <Button size="lg" className="bg-accent text-white hover:bg-accent/90 h-16 px-10 text-xl font-bold shadow-2xl transition-all hover:scale-105">Book a Visit</Button>
+                <Button size="lg" className="bg-orange-500 text-white hover:bg-orange-600 h-16 px-12 text-xl font-bold shadow-2xl transition-all hover:scale-105 active:scale-95">Book a Visit</Button>
               </Link>
               <a href={`tel:${SITE_CONFIG.contact.phone.replace(/ /g, '')}`}>
-                <Button variant="outline" size="lg" className="h-16 px-10 text-xl font-bold border-white/40 text-white bg-white/10 backdrop-blur-md hover:bg-white hover:text-primary transition-all hover:scale-105">Call Now</Button>
+                <Button variant="outline" size="lg" className="h-16 px-12 text-xl font-bold border-white/40 text-white bg-white/10 backdrop-blur-md hover:bg-white hover:text-primary transition-all hover:scale-105 active:scale-95">Call Admissions</Button>
               </a>
             </div>
           </motion.div>

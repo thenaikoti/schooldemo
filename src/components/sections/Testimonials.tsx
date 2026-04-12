@@ -34,6 +34,7 @@ export function Testimonials() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           >
             <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">Testimonials</h2>
@@ -48,9 +49,9 @@ export function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
             >
               <Card className="h-full border-none shadow-sm hover:shadow-lg transition-all duration-300 relative overflow-hidden bg-white">

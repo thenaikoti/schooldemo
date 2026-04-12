@@ -35,6 +35,7 @@ export function AdmissionProcess() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           >
             <h2 className="text-sm font-bold tracking-widest text-primary-foreground/70 uppercase mb-3">Admission Process</h2>
@@ -53,9 +54,9 @@ export function AdmissionProcess() {
             {steps.map((step, index) => (
               <motion.div
                 key={step.title}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
                 viewport={{ once: true }}
                 className="text-center group"
               >

@@ -61,13 +61,13 @@ export function LeadGen() {
         onClick={handleManualEnquiry}
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="fixed bottom-24 right-6 z-40 bg-accent text-white p-4 rounded-full shadow-2xl transition-all flex items-center justify-center group overflow-hidden"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="fixed bottom-[108px] sm:bottom-28 right-6 z-40 bg-orange-500 hover:bg-orange-600 text-white p-4 rounded-full shadow-2xl transition-all flex items-center justify-center group overflow-hidden border-2 border-white/20"
       >
         <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
         <MessageSquare className="w-6 h-6 relative z-10" />
-        <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 font-medium whitespace-nowrap relative z-10">
+        <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 font-bold whitespace-nowrap relative z-10">
           Enquire Now
         </span>
       </motion.button>

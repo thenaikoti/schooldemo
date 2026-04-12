@@ -50,6 +50,7 @@ export function Programs() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           >
             <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">Our Programs</h2>
@@ -64,9 +65,9 @@ export function Programs() {
           {programs.map((program, index) => (
             <motion.div
               key={program.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
             >
               <Card className="h-full border-none shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2">

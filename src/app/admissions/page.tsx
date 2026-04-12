@@ -34,17 +34,12 @@ export default function AdmissionsPage() {
       />
 
       {/* Urgency Banner */}
-      <div className="bg-orange-500 text-white py-4 px-4 text-center sticky top-20 z-30 shadow-md">
-        <div className="container mx-auto flex flex-col sm:flex-row items-center justify-center gap-4">
-          <p className="font-bold text-lg">⚠️ Admissions Closing Soon for 2026–27</p>
-          <div className="flex gap-3">
-             <Link href="#enquiry">
-                <Button size="sm" variant="secondary" className="font-bold shadow-lg">Apply Now</Button>
-             </Link>
-             <a href="https://wa.me/919999999999" target="_blank" rel="noopener">
-                <Button size="sm" className="bg-[#25D366] hover:bg-[#20ba59] border-none font-bold">WhatsApp Us</Button>
-             </a>
-          </div>
+      <div className="bg-orange-500 text-white py-4 shadow-inner relative z-10">
+        <div className="container mx-auto px-4 flex items-center justify-center gap-3">
+          <AlertCircle className="w-5 h-5 animate-pulse" />
+          <span className="font-bold tracking-wide text-sm md:text-base uppercase underline-offset-4 decoration-2">
+            Seats filling fast for 2026–27 batch • Limited Vacancies
+          </span>
         </div>
       </div>
 

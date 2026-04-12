@@ -37,7 +37,7 @@ export function Stats() {
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
               className="group text-center flex flex-col items-center"
             >

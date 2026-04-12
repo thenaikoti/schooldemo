@@ -54,8 +54,9 @@ export function WhyChooseUs() {
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <div className="lg:w-1/3">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
             >
               <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">Why {SITE_CONFIG.shortName}?</h2>
@@ -90,9 +91,9 @@ export function WhyChooseUs() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.05 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
                 viewport={{ once: true }}
                 className="p-6 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:shadow-lg transition-all duration-300 group"
               >

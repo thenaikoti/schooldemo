@@ -43,7 +43,7 @@ export function GalleryPreview() {
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -51,10 +51,10 @@ export function GalleryPreview() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <h2 className="text-sm font-extrabold tracking-widest text-primary uppercase mb-3">Campus life</h2>
-              <h3 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6Leading-tight">Capturing Moments of Learning & Joy</h3>
-              <p className="text-lg text-slate-600 font-medium">
-                A glimpse into everyday learning, growth, and joy at {SITE_CONFIG.shortName}.
+              <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">Campus Life</h2>
+              <h3 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">A glimpse into everyday learning, growth, and joy at GVIS.</h3>
+              <p className="text-lg text-slate-600">
+                Beyond classrooms, discover the vibrant world of our students as they explore, innovate, and excel.
               </p>
             </motion.div>
           </div>
