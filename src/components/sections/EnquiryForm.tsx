@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import { Send, MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";

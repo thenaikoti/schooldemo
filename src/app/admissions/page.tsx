@@ -1,11 +1,13 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
 import { EnquiryForm } from "@/components/sections/EnquiryForm";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
 import { FileText, ClipboardCheck, Calendar, UserCheck, CheckCircle2, AlertCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const requirements = [
   "Birth Certificate of the child (Original & Copy)",
@@ -126,7 +128,7 @@ export default function AdmissionsPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
           </div>
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion className="w-full">
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-left font-bold text-lg py-6">What is the age criteria for Pre-Primary admission?</AccordionTrigger>
               <AccordionContent className="text-slate-600 pb-6">

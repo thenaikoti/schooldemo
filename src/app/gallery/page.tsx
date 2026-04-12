@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
 import { motion, AnimatePresence } from "framer-motion";
 import { Maximize2, Filter } from "lucide-react";
