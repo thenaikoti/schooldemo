@@ -7,18 +7,34 @@ import { ArrowRight, Calendar, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SITE_CONFIG } from "@/constants/site";
 
+import Image from "next/image";
+
 export function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-slate-900">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?q=80&w=2000"
-          alt="Premium School Campus"
-          className="w-full h-full object-cover opacity-85"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-950/30 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-slate-950/20"></div>
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <motion.div
+          initial={{ scale: 1 }}
+          animate={{ scale: 1.05 }}
+          transition={{ duration: 10, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
+          className="relative w-full h-full"
+        >
+          <Image
+            src="/images/hero-campus.png"
+            alt="Premium School Campus"
+            fill
+            priority
+            className="object-cover"
+          />
+        </motion.div>
+        
+        {/* Optimized Overlay: 30-40% opacity for maximum image clarity */}
+        <div className="absolute inset-0 bg-black/35"></div>
+        
+        {/* Depth: Left-side gradient for text readability while keeping right side clear */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent"></div>
+        <div className="absolute inset-0 backdrop-blur-[1px] md:backdrop-blur-none bg-gradient-to-b from-black/20 via-transparent to-black/20"></div>
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
