@@ -33,7 +33,7 @@ const images = [
     category: "Culture",
   },
   {
-    src: "https://images.unsplash.com/photo-1577896851231-70ef14697593?q=80&w=800",
+    src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800",
     title: "Robotics Workshop",
     category: "Activities",
   },

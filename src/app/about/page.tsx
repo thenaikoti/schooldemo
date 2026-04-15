@@ -42,7 +42,7 @@ export default function AboutPage() {
             <div className="lg:w-1/2 relative">
               <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?q=80&w=1000"
+                  src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=1000"
                   alt="School Campus"
                   className="w-full h-full object-cover"
                 />
