@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-[95vh] flex items-center overflow-hidden">
+    <section className="relative w-full min-h-[100vh] flex items-center overflow-hidden py-16">
       {/* Background Image Layer */}
       <div className="absolute inset-0 -z-10 bg-slate-900">
         <motion.img
