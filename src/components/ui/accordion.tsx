@@ -3,11 +3,17 @@ import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion"
 import { cn } from "@/lib/utils"
 import { ChevronDownIcon, ChevronUpIcon } from "lucide-react"
 
-function Accordion({ className, ...props }: AccordionPrimitive.Root.Props) {
+interface AccordionProps extends AccordionPrimitive.Root.Props {
+  collapsible?: boolean;
+}
+
+function Accordion({ className, collapsible, ...props }: AccordionProps) {
   return (
     <AccordionPrimitive.Root
       data-slot="accordion"
       className={cn("flex w-full flex-col", className)}
+      // Base UI might not use collapsible prop directly on Root in the same way Radix does, 
+      // but we ensure it doesn't leak to the DOM.
       {...props}
     />
   )

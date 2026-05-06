@@ -1,114 +1,101 @@
 "use client";
 
-import React from "react";
 import { motion } from "framer-motion";
-import { Laptop, Cpu, Beaker, Trophy, Library, Bus, ShieldCheck, UserCheck } from "lucide-react";
+import { Sparkles, BrainCircuit, Globe2, HeartHandshake, Laptop, ShieldCheck } from "lucide-react";
 
 const features = [
   {
-    icon: <Laptop className="w-6 h-6" />,
-    title: "Smart Classrooms",
-    description: "Equipped with interactive boards and audio-visual tools for an engaging learning experience.",
+    title: "Future-Ready Curriculum",
+    description: "Integrating AI, coding, and robotics from early years to prepare students for tomorrow's challenges.",
+    icon: BrainCircuit,
+    color: "bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400",
   },
   {
-    icon: <Cpu className="w-6 h-6" />,
-    title: "Robotics & STEM Lab",
-    description: "Hands-on learning with modern kits to foster innovation and technological literacy.",
+    title: "Global Perspective",
+    description: "International exchange programs and globally recognized certifications built into the core framework.",
+    icon: Globe2,
+    color: "bg-purple-500/10 text-purple-600 dark:bg-purple-500/20 dark:text-purple-400",
   },
   {
-    icon: <Beaker className="w-6 h-6" />,
-    title: "Advanced Science Labs",
-    description: "State-of-the-art Physics, Chemistry, and Biology labs for practical exploration.",
+    title: "Holistic Development",
+    description: "Equal emphasis on academics, sports, arts, and emotional intelligence for well-rounded growth.",
+    icon: HeartHandshake,
+    color: "bg-rose-500/10 text-rose-600 dark:bg-rose-500/20 dark:text-rose-400",
   },
   {
-    icon: <Trophy className="w-6 h-6" />,
-    title: "Sports Complex",
-    description: "Extensive facilities for football, basketball, cricket, and professional coaching.",
+    title: "Digital Ecosystem",
+    description: "Smart classrooms and a comprehensive parent-teacher connect app for real-time progress tracking.",
+    icon: Laptop,
+    color: "bg-emerald-500/10 text-emerald-600 dark:bg-emerald-500/20 dark:text-emerald-400",
   },
   {
-    icon: <Library className="w-6 h-6" />,
-    title: "Digital Library",
-    description: "A vast collection of books and digital resources to inspire independent reading.",
+    title: "Safe Environment",
+    description: "24/7 security, GPS-enabled transport, and strict zero-tolerance anti-bullying policies.",
+    icon: ShieldCheck,
+    color: "bg-amber-500/10 text-amber-600 dark:bg-amber-500/20 dark:text-amber-400",
   },
   {
-    icon: <Bus className="w-6 h-6" />,
-    title: "Safe Transport",
-    description: "GPS-enabled bus fleet with trained staff ensuring safe commute for every child.",
-  },
-  {
-    icon: <ShieldCheck className="w-6 h-6" />,
-    title: "Safe & Secure",
-    description: "CCTV surveillance and 24/7 security personnel across the entire campus.",
-  },
-  {
-    icon: <UserCheck className="w-6 h-6" />,
-    title: "Expert Faculty",
-    description: "Highly qualified and compassionate educators dedicated to student growth.",
+    title: "Individual Attention",
+    description: "Optimal student-teacher ratio ensures personalized learning paths for every child's unique needs.",
+    icon: Sparkles,
+    color: "bg-indigo-500/10 text-indigo-600 dark:bg-indigo-500/20 dark:text-indigo-400",
   },
 ];
 
 export function WhyChooseUs() {
   return (
-    <section className="py-24 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row gap-16 items-center">
-          <div className="lg:w-1/3">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">Why {SITE_CONFIG.shortName}?</h2>
-              <h3 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6Leading-tight">World-Class Facilities for Holistic Growth</h3>
-              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                We believe that the right infrastructure plays a crucial role in a student's educational journey. Our campus is designed to provide global standards of learning.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
-                    <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  </div>
-                  <span className="font-semibold text-slate-700">CBSE Affiliated Excellence</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
-                    <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  </div>
-                  <span className="font-semibold text-slate-700">Student-Centric Approach</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
-                    <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  </div>
-                  <span className="font-semibold text-slate-700">Global Perspective, Local Values</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+    <section className="relative overflow-hidden py-24 bg-white dark:bg-black">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="flex flex-col items-center text-center gap-4 mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center rounded-full border border-black/10 bg-black/5 px-3 py-1 text-sm font-medium dark:border-white/10 dark:bg-white/5"
+          >
+            <Sparkles className="mr-2 h-4 w-4 text-blue-500" />
+            <span className="text-neutral-800 dark:text-neutral-200">The Surya Advantage</span>
+          </motion.div>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-neutral-900 dark:text-white max-w-2xl"
+          >
+            Why Parents Choose Us for Their Child's Future
+          </motion.h2>
+        </div>
 
-          <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map((feature, index) => {
+            const Icon = feature.icon;
+            return (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                viewport={{ once: true }}
-                className="p-6 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:shadow-lg transition-all duration-300 group"
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group relative overflow-hidden rounded-3xl border border-black/5 bg-neutral-50 p-8 transition-colors hover:bg-white dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-900/80"
               >
-                <div className="w-12 h-12 rounded-lg bg-white shadow-sm flex items-center justify-center text-primary mb-5 group-hover:bg-primary group-hover:text-white transition-colors">
-                  {feature.icon}
+                <div className={`mb-6 inline-flex rounded-2xl p-4 transition-transform duration-300 group-hover:scale-110 ${feature.color}`}>
+                  <Icon className="h-6 w-6" />
                 </div>
-                <h4 className="text-xl font-bold text-slate-900 mb-2">{feature.title}</h4>
-                <p className="text-slate-500 text-sm leading-relaxed">{feature.description}</p>
+                <h3 className="mb-3 text-xl font-semibold text-neutral-900 dark:text-white">
+                  {feature.title}
+                </h3>
+                <p className="text-neutral-600 dark:text-neutral-400">
+                  {feature.description}
+                </p>
+                
+                {/* Decorative background element */}
+                <div className="absolute -right-12 -top-12 -z-10 h-32 w-32 rounded-full bg-black/[0.02] transition-transform duration-500 group-hover:scale-150 dark:bg-white/[0.02]" />
               </motion.div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
-
-import { SITE_CONFIG } from "@/constants/site";

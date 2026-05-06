@@ -1,28 +1,25 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
-import { PageHeader } from "@/components/PageHeader";
+import { PageLayout } from "@/components/v2/PageLayout";
+import { SectionWrapper } from "@/components/v2/SectionWrapper";
+import { Button } from "@/components/v2/Primitives";
 import { motion, AnimatePresence } from "framer-motion";
-import { Maximize2, Filter } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Maximize2, Filter, Camera } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const categories = ["All", "Campus", "Events", "Sports", "Activities"];
 
 const galleryImages = [
-  { id: 1, src: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=800", category: "Events", title: "Annual Gathering 2024" },
-  { id: 2, src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800", category: "Activities", title: "Chemistry Lab Session" },
-  { id: 3, src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=800", category: "Campus", title: "Main Campus Entrance" },
-  { id: 4, src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800", category: "Activities", title: "Digital Literacy Class" },
-  { id: 5, src: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=800", category: "Events", title: "Grand Concert" },
-  { id: 6, src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800", category: "Activities", title: "Coding Club" },
-  { id: 7, src: "https://images.unsplash.com/photo-1519315901367-f34ff9154487?q=80&w=800", category: "Sports", title: "Swimming Championship" },
-  { id: 8, src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800", category: "Campus", title: "Assembly Area" },
-  { id: 9, src: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=800", category: "Campus", title: "University Block" },
-  { id: 10, src: "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?q=80&w=800", category: "Sports", title: "Football Training" },
-  { id: 11, src: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=800", category: "Activities", title: "Art & Craft Workshop" },
-  { id: 12, src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800", category: "Events", title: "Graduation Ceremony" },
+  { id: 1, src: "/images/smart_classroom_1776796474806.png", category: "Campus", title: "Smart Learning Hub" },
+  { id: 2, src: "/images/secondary_science_lab_1776796589067.png", category: "Activities", title: "Chemistry Excellence" },
+  { id: 3, src: "/images/about_school_campus_1776796440311.png", category: "Campus", title: "Main Architecture" },
+  { id: 4, src: "/images/programs_stem_1776796289895.png", category: "Activities", title: "Robotics Workshop" },
+  { id: 5, src: "/images/olympic_pool_1776796520746.png", category: "Sports", title: "Aquatic Center" },
+  { id: 6, src: "/images/pre_primary_kids_1776796536863.png", category: "Activities", title: "Early Exploration" },
+  { id: 7, src: "/images/primary_education_students_1776796553414.png", category: "Activities", title: "Primary Learning" },
+  { id: 8, src: "/images/higher_secondary_students_1776796605835.png", category: "Activities", title: "Senior Research" },
+  { id: 9, src: "/images/annual_sports_day_event_1776796621655.png", category: "Events", title: "Annual Sports Day" },
 ];
 
 export default function GalleryPage() {
@@ -33,93 +30,87 @@ export default function GalleryPage() {
     : galleryImages.filter(img => img.category === activeCategory);
 
   return (
-    <div className="flex flex-col">
-      <PageHeader
-        title="School Gallery"
-        subtitle="A visual journey through the vibrant life, events, and achievements at our campus."
-      />
-
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          {/* Filters */}
-          <div className="flex flex-wrap justify-center items-center gap-4 mb-16">
-            <div className="flex items-center gap-2 mr-4 text-slate-400">
-              <Filter className="w-5 h-5" />
-              <span className="font-semibold text-sm uppercase tracking-wider">Filter By:</span>
-            </div>
-            {categories.map((cat) => (
-              <Button
-                key={cat}
-                variant={activeCategory === cat ? "default" : "outline"}
-                className={cn(
-                  "rounded-full px-8 py-2 transition-all duration-300",
-                  activeCategory === cat ? "shadow-lg scale-105" : "hover:border-primary hover:text-primary"
-                )}
-                onClick={() => setActiveCategory(cat)}
-              >
-                {cat}
-              </Button>
-            ))}
+    <PageLayout
+      title="Our Visual Heritage."
+      subtitle="A journey through the vibrant life, elite events, and academic achievements at our campus."
+    >
+      <SectionWrapper className="bg-white dark:bg-neutral-950">
+        {/* Filters */}
+        <div className="flex flex-wrap justify-center items-center gap-4 mb-20">
+          <div className="flex items-center gap-3 mr-6 text-neutral-400">
+            <Filter className="w-5 h-5" />
+            <span className="font-black text-xs uppercase tracking-widest">Filter Media</span>
           </div>
-
-          {/* Masonry-style Grid */}
-          <motion.div 
-            layout
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-          >
-            <AnimatePresence mode="popLayout">
-              {filteredImages.map((img) => (
-                <motion.div
-                  key={img.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.4 }}
-                  className="group relative overflow-hidden rounded-2xl aspect-[4/5] bg-slate-100"
-                >
-                  <img
-                    src={img.src}
-                    alt={img.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                    <span className="text-accent text-sm font-bold mb-1 uppercase tracking-wider">{img.category}</span>
-                    <h4 className="text-white text-lg font-bold mb-4">{img.title}</h4>
-                    <button className="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center transition-transform hover:scale-110">
-                      <Maximize2 className="w-5 h-5" />
-                    </button>
-                  </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </motion.div>
-
-          {filteredImages.length === 0 && (
-            <div className="text-center py-20">
-              <p className="text-xl text-slate-400">No images found in this category.</p>
-            </div>
-          )}
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={cn(
+                "rounded-full px-10 py-3 text-sm font-black transition-all duration-500 tracking-tight",
+                activeCategory === cat 
+                  ? "bg-primary text-white shadow-xl shadow-primary/30 scale-105" 
+                  : "bg-neutral-50 dark:bg-neutral-900 text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+              )}
+            >
+              {cat}
+            </button>
+          ))}
         </div>
-      </section>
+
+        {/* Grid */}
+        <motion.div 
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+        >
+          <AnimatePresence mode="popLayout">
+            {filteredImages.map((img, i) => (
+              <motion.div
+                key={img.id}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.5, delay: i * 0.05 }}
+                className="group relative overflow-hidden rounded-[2.5rem] aspect-[4/5] bg-neutral-100 dark:bg-neutral-900 shadow-sm hover:shadow-2xl transition-all duration-500"
+              >
+                <img
+                  src={img.src}
+                  alt={img.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-10">
+                  <span className="text-primary text-xs font-black mb-2 uppercase tracking-[0.2em]">{img.category}</span>
+                  <h4 className="text-white text-2xl font-black mb-6 tracking-tight">{img.title}</h4>
+                  <button className="w-14 h-14 rounded-2xl bg-white text-primary flex items-center justify-center transition-all hover:scale-110 hover:rotate-6">
+                    <Maximize2 className="w-6 h-6" />
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+
+        {filteredImages.length === 0 && (
+          <div className="text-center py-40">
+            <Camera className="w-16 h-16 text-neutral-200 mx-auto mb-6" />
+            <p className="text-2xl font-black text-neutral-300">No media found in this category.</p>
+          </div>
+        )}
+      </SectionWrapper>
 
       {/* CTA Section */}
-      <section className="py-24 bg-slate-50 border-t">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Want to see our campus in person?</h2>
-          <p className="text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-            Book a personalized tour and see our state-of-the-art facilities and vibrant learning environment for yourself.
+      <SectionWrapper className="bg-neutral-950 text-white text-center rounded-[4rem] mx-4 mb-20">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">Experience it in person.</h2>
+          <p className="text-xl text-neutral-400 font-medium mb-12 leading-relaxed">
+            Book a personalized campus tour and see our state-of-the-art facilities and vibrant learning environment first-hand.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-             <Link href="/admissions">
-               <Button size="lg" className="h-14 px-10 shadow-xl">Apply for Admission</Button>
-             </Link>
-             <Link href="/contact">
-               <Button size="lg" variant="outline" className="h-14 px-10">Contact Admissions</Button>
-             </Link>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+             <Button size="lg" className="h-16 px-12 text-lg">Apply for Admission</Button>
+             <Button size="lg" variant="outline" className="h-16 px-12 text-lg border-white/20 hover:bg-white hover:text-neutral-900">Contact Admissions</Button>
           </div>
         </div>
-      </section>
-    </div>
+      </SectionWrapper>
+    </PageLayout>
   );
 }

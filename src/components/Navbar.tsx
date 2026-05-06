@@ -39,7 +39,7 @@ export function Navbar() {
             </div>
             <span className={cn(
               "font-bold text-xl tracking-tight transition-colors",
-              scrolled ? "text-primary" : "text-primary md:text-white"
+              scrolled ? "text-primary" : "text-neutral-900 dark:text-white"
             )}>
               {SITE_CONFIG.shortName}
             </span>
@@ -55,7 +55,7 @@ export function Navbar() {
                   "text-sm font-medium transition-colors hover:text-accent",
                   pathname === link.href
                     ? "text-accent"
-                    : scrolled ? "text-muted-foreground" : "text-white/90"
+                    : "text-neutral-700 dark:text-neutral-200"
                 )}
               >
                 {link.name}
@@ -66,8 +66,8 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <Link href="/admissions">
               <Button variant="outline" className={cn(
-                "hidden lg:flex transition-all hover:scale-105",
-                !scrolled && "bg-transparent text-white border-white hover:bg-white hover:text-primary"
+                "hidden lg:flex transition-all hover:scale-105 border-neutral-300 text-neutral-800 dark:border-neutral-700 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800",
+                scrolled && "border-primary text-primary hover:bg-primary hover:text-white"
               )}>
                 Apply Now
               </Button>
@@ -82,8 +82,8 @@ export function Navbar() {
           {/* Mobile Toggle */}
           <button
             className={cn(
-              "md:hidden p-2 rounded-md",
-              scrolled ? "text-primary" : "text-primary md:text-white"
+              "md:hidden p-2 rounded-md transition-colors",
+              scrolled ? "text-primary" : "text-neutral-800 dark:text-neutral-200"
             )}
             onClick={() => setIsOpen(!isOpen)}
           >

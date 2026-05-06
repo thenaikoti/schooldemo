@@ -1,89 +1,117 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
-import { Quote, Star } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Marquee } from "@/components/magicui/marquee";
+import { Star } from "lucide-react";
+import Image from "next/image";
 
 const testimonials = [
   {
-    name: "Mr. Rajesh Sharma",
-    role: "Parent of Grade 4 Student",
-    content: "The holistic development focus at Green Valley is truly remarkable. My son has not only improved academically but has also become more confident and socially aware.",
-    avatar: "https://i.pravatar.cc/150?u=parent1",
+    name: "Priya Sharma",
+    role: "Parent of Class X Student",
+    content: "The transformation in my child's confidence and academic performance has been simply remarkable. The teachers genuinely care.",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150",
   },
   {
-    name: "Ms. Priya Kulkarni",
-    role: "Parent of Grade 8 Student",
-    content: "The teaching faculty is exceptional. They go beyond the textbooks to ensure every child understands the concepts. The smart classrooms and labs are world-class.",
-    avatar: "https://i.pravatar.cc/150?u=parent2",
+    name: "Dr. Rajesh Kumar",
+    role: "Alumnus (Batch of 2010)",
+    content: "The foundation I received here was instrumental in my medical career. The focus on holistic development made all the difference.",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150",
   },
   {
-    name: "Dr. Ananya Reddy",
-    role: "Parent of Grade 2 Student",
-    content: "I am highly impressed with the school's focus on safety and individual attention. The communication between teachers and parents is very transparent.",
-    avatar: "https://i.pravatar.cc/150?u=parent3",
+    name: "Anjali Desai",
+    role: "Parent of Class V Student",
+    content: "The robotics and AI curriculum for early grades is exceptional. My daughter already knows more about coding than I do!",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150",
+  },
+  {
+    name: "Arun Verma",
+    role: "Parent of Class XII Student",
+    content: "The integrated coaching program saved us so much time and stress. A truly modern approach to secondary education.",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150",
+  },
+  {
+    name: "Meera Patel",
+    role: "Parent of LKG Student",
+    content: "We couldn't have asked for a better start to our son's educational journey. The play-based learning approach is wonderful.",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150",
+  },
+  {
+    name: "Vikas Reddy",
+    role: "Alumnus (Batch of 2015)",
+    content: "The international exchange programs opened up my worldview. Currently pursuing my Master's abroad with full scholarship.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150",
   },
 ];
 
-export function Testimonials() {
+const ReviewCard = ({
+  image,
+  name,
+  role,
+  content,
+}: {
+  image: string;
+  name: string;
+  role: string;
+  content: string;
+}) => {
   return (
-    <section className="py-24 bg-slate-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">Testimonials</h2>
-            <h3 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6Leading-tight">What Our Parents Say</h3>
-            <p className="text-lg text-slate-600">
-              Hear from the families who have trusted us with their child's education and future.
-            </p>
-          </motion.div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={testimonial.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true }}
-            >
-              <Card className="h-full border-none shadow-sm hover:shadow-lg transition-all duration-300 relative overflow-hidden bg-white">
-                <div className="absolute top-0 right-0 p-6 opacity-10">
-                  <Quote className="w-16 h-16 text-primary" />
-                </div>
-                <CardContent className="p-8">
-                  <div className="flex gap-1 mb-6">
-                    {[1, 2, 3, 4, 5].map((s) => (
-                      <Star key={s} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
-                  <p className="text-slate-600 italic mb-8 relative z-10 leading-relaxed">
-                    "{testimonial.content}"
-                  </p>
-                  <div className="flex items-center gap-4">
-                    <img
-                      src={testimonial.avatar}
-                      alt={testimonial.name}
-                      className="w-12 h-12 rounded-full object-cover"
-                    />
-                    <div>
-                      <h4 className="font-bold text-slate-900">{testimonial.name}</h4>
-                      <p className="text-sm text-slate-500">{testimonial.role}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+    <figure
+      className="relative w-80 cursor-pointer overflow-hidden rounded-xl border p-6 flex flex-col gap-4 bg-white/50 border-black/10 hover:bg-white/80 dark:bg-black/50 dark:border-white/10 dark:hover:bg-black/80 transition-colors backdrop-blur-md"
+    >
+      <div className="flex flex-row items-center gap-4">
+        <Image
+          className="rounded-full object-cover"
+          width="48"
+          height="48"
+          alt={name}
+          src={image}
+        />
+        <div className="flex flex-col">
+          <figcaption className="text-sm font-medium dark:text-white">
+            {name}
+          </figcaption>
+          <p className="text-xs font-medium dark:text-white/40">{role}</p>
         </div>
       </div>
+      <blockquote className="mt-2 text-sm italic text-neutral-600 dark:text-neutral-300">"{content}"</blockquote>
+      <div className="mt-auto flex gap-1">
+        {[...Array(5)].map((_, i) => (
+          <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+        ))}
+      </div>
+    </figure>
+  );
+};
+
+export function Testimonials() {
+  const firstRow = testimonials.slice(0, testimonials.length / 2);
+  const secondRow = testimonials.slice(testimonials.length / 2);
+
+  return (
+    <section className="relative flex min-h-[600px] w-full flex-col items-center justify-center overflow-hidden bg-background py-24">
+      <div className="container flex flex-col items-center mb-12">
+         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-neutral-900 dark:text-neutral-50 mb-4">
+            Hear From Our <span className="text-primary text-blue-600 dark:text-blue-500">Community</span>
+         </h2>
+         <p className="text-lg text-neutral-600 dark:text-neutral-400 text-center max-w-2xl px-4">
+            Discover why parents and alumni trust us with their educational journey.
+         </p>
+      </div>
+
+      <Marquee pauseOnHover className="[--duration:40s]">
+        {firstRow.map((review) => (
+          <ReviewCard key={review.name} {...review} />
+        ))}
+      </Marquee>
+      <Marquee reverse pauseOnHover className="[--duration:40s]">
+        {secondRow.map((review) => (
+          <ReviewCard key={review.name} {...review} />
+        ))}
+      </Marquee>
+      
+      {/* Gradients to fade edges */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-background dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-background dark:from-background"></div>
     </section>
   );
 }

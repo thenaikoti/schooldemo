@@ -1,74 +1,70 @@
-"use client";
-
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowRight, Calendar } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Particles } from "@/components/magicui/particles";
+import { ShinyButton } from "@/components/magicui/shiny-button";
+import { TextReveal } from "@/components/magicui/text-reveal";
+import { ArrowRight, Play } from "lucide-react";
+import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-[100vh] flex items-center overflow-hidden py-16">
-      {/* Background Image Layer */}
-      <div className="absolute inset-0 -z-10 bg-slate-900">
-        <motion.img
-          initial={{ scale: 1 }}
-          animate={{ scale: 1.05 }}
-          transition={{ duration: 10, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
-          src="/hero-school.jpg"
-          alt="School Campus"
-          className="w-full h-full object-cover"
-        />
-        {/* Gradient Overlay (NOT SOLID) for Depth & Readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-      </div>
+    <section className="relative flex min-h-[90vh] w-full flex-col items-center justify-center overflow-hidden bg-background">
+      {/* Particles effect for the background */}
+      <Particles
+        className="absolute inset-0 z-0"
+        quantity={80}
+        ease={80}
+        color={"#3b82f6"} // primary blue glow hint
+        refresh
+      />
 
-      {/* Content Layer */}
-      <div className="container mx-auto px-6">
-        <div className="max-w-3xl text-white">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            <span className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-widest text-white uppercase bg-orange-500 rounded-full shadow-lg">
-              Admissions Open for 2026–27
+      <div className="z-10 container flex flex-col items-center gap-8 px-4 text-center sm:px-6">
+        <a
+          href="#"
+          className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/50 px-4 py-1.5 text-sm font-medium text-black backdrop-blur-md transition-colors hover:bg-black/5 dark:border-white/10 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
+        >
+          <span className="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
+          Admissions Open for 2026-27
+          <ArrowRight className="h-4 w-4" />
+        </a>
+
+        <div className="flex max-w-4xl flex-col items-center gap-6">
+          <h1 className="text-balance text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-7xl">
+            Empowering the Next Generation of{" "}
+            <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+              <TextReveal text="Global Leaders" />
             </span>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight tracking-tight">
-              Shaping Future <br /> 
-              <span className="text-orange-400">Leaders</span> with Excellence
-            </h1>
-            <p className="text-xl md:text-2xl text-slate-100 mb-8 leading-relaxed max-w-2xl font-medium">
-              Join a community of excellence where your child's future is nurtured with care and global standards.
-              <span className="text-sm opacity-90 mt-2 block font-normal text-slate-300">Trusted by 2000+ happy parents across the city</span>
-            </p>
+          </h1>
+          
+          <p className="max-w-2xl text-lg text-neutral-600 dark:text-neutral-400 sm:text-xl">
+            Experience world-class education where innovation meets tradition. Join a 
+            community dedicated to nurturing excellence, creativity, and future-ready skills.
+          </p>
 
-            <div className="flex flex-col sm:flex-row gap-5 mb-8">
-              <Link href="/admissions">
-                <Button size="lg" className="bg-orange-600 hover:bg-orange-700 h-16 px-10 text-xl font-bold group shadow-2xl transition-all hover:scale-105 active:scale-95">
-                  Apply for Admission
-                  <ArrowRight className="ml-2 w-6 h-6 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button variant="outline" size="lg" className="h-16 px-10 text-xl font-bold text-white border-white/50 bg-white/10 backdrop-blur-md hover:bg-white hover:text-primary transition-all hover:scale-105 active:scale-95">
-                  <Calendar className="mr-2 w-6 h-6" />
-                  Book a Campus Visit
-                </Button>
-              </Link>
-            </div>
+          <div className="flex w-full flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+            <ShinyButton className="w-full sm:w-auto bg-black text-white dark:bg-white dark:text-black">
+              Start Application
+            </ShinyButton>
             
-            <motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
-              className="text-sm text-white/80 font-medium flex items-center gap-2"
+            <a
+              href="#campus-tour"
+              className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-xl border border-black/10 bg-transparent px-8 py-3 font-medium text-neutral-900 transition-colors hover:bg-black/5 dark:border-white/10 dark:text-white dark:hover:bg-white/5"
             >
-              <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-              Get a call back within 24 hours
-            </motion.p>
-          </motion.div>
+              <Play className="h-4 w-4" />
+              Watch Campus Tour
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-16 w-full max-w-5xl rounded-2xl border border-black/10 bg-white/50 p-2 shadow-2xl backdrop-blur-xl dark:border-white/10 dark:bg-black/50 sm:p-4">
+          <div className="relative aspect-video w-full overflow-hidden rounded-xl">
+             <Image
+                src="/images/hero_campus_1776796274174.png"
+                alt="Students studying on campus"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+          </div>
         </div>
       </div>
     </section>

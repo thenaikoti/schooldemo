@@ -4,6 +4,18 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: ".",
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "ui.shadcn.com",
+      }
+    ],
+  },
 };
 
 export default nextConfig;

@@ -5,53 +5,58 @@ import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { SITE_CONFIG } from "@/constants/site";
 
+import { SectionHeader } from "@/components/SectionHeader";
+
 export function ContactSection() {
   return (
-    <section className="py-24 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row gap-16">
+    <section className="py-24 md:py-32 bg-white relative">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
           <div className="lg:w-1/2">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">Our Location</h2>
-              <h3 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8Leading-tight">Visit Our Campus Today</h3>
-              <p className="text-lg text-slate-600 mb-10 leading-relaxed">
-                We are located in a peaceful, green environment that is ideal for learning and growth. Our campus is easily accessible from all parts of the city.
-              </p>
+              <SectionHeader
+                subtitle="Our Presence"
+                title="Visit Our Campus Today"
+                description="We are located in a peaceful, green environment that is ideal for learning and growth. Our campus is easily accessible from all parts of the city."
+                align="left"
+                className="mb-12"
+              />
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-primary shrink-0 mt-1" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-12 mb-12">
+                <div className="space-y-8">
+                  <div className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 border border-slate-100/50 hover:bg-white hover:shadow-xl transition-all duration-500">
+                    <MapPin className="w-8 h-8 text-primary shrink-0" />
                     <div>
-                      <h4 className="font-bold text-slate-900">Address</h4>
-                      <p className="text-sm text-slate-500">{SITE_CONFIG.contact.address}</p>
+                      <h4 className="font-black text-slate-900 tracking-tight text-xl mb-1">Main Campus</h4>
+                      <p className="text-base text-slate-500 font-medium">{SITE_CONFIG.contact.address}</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <Phone className="w-5 h-5 text-primary shrink-0 mt-1" />
+                  <div className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 border border-slate-100/50 hover:bg-white hover:shadow-xl transition-all duration-500">
+                    <Phone className="w-8 h-8 text-primary shrink-0" />
                     <div>
-                      <h4 className="font-bold text-slate-900">Phone</h4>
-                      <p className="text-sm text-slate-500">{SITE_CONFIG.contact.phone}</p>
+                      <h4 className="font-black text-slate-900 tracking-tight text-xl mb-1">Direct Line</h4>
+                      <p className="text-base text-slate-500 font-medium">{SITE_CONFIG.contact.phone}</p>
                     </div>
                   </div>
                 </div>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <Mail className="w-5 h-5 text-primary shrink-0 mt-1" />
+                <div className="space-y-8">
+                  <div className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 border border-slate-100/50 hover:bg-white hover:shadow-xl transition-all duration-500">
+                    <Mail className="w-8 h-8 text-primary shrink-0" />
                     <div>
-                      <h4 className="font-bold text-slate-900">Email</h4>
-                      <p className="text-sm text-slate-500">{SITE_CONFIG.contact.email}</p>
+                      <h4 className="font-black text-slate-900 tracking-tight text-xl mb-1">Official Email</h4>
+                      <p className="text-base text-slate-500 font-medium">{SITE_CONFIG.contact.email}</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <Clock className="w-5 h-5 text-primary shrink-0 mt-1" />
+                  <div className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 border border-slate-100/50 hover:bg-white hover:shadow-xl transition-all duration-500">
+                    <Clock className="w-8 h-8 text-primary shrink-0" />
                     <div>
-                      <h4 className="font-bold text-slate-900">Office Hours</h4>
-                      <p className="text-sm text-slate-500">Mon - Sat: 8:00 AM - 4:00 PM</p>
+                      <h4 className="font-black text-slate-900 tracking-tight text-xl mb-1">Office Hours</h4>
+                      <p className="text-base text-slate-500 font-medium">Mon - Sat: 8:00 AM - 4:00 PM</p>
                     </div>
                   </div>
                 </div>
@@ -63,9 +68,11 @@ export function ContactSection() {
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="h-[400px] lg:h-full min-h-[400px] rounded-3xl overflow-hidden shadow-xl grayscale hover:grayscale-0 transition-all duration-700"
+              className="h-[500px] lg:h-full min-h-[500px] rounded-[3rem] overflow-hidden shadow-2xl relative group"
             >
+              <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-700 pointer-events-none z-10"></div>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15551.921876523992!2d77.5936!3d12.9724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzIwLjEiTiA3N8KwMzUnMzcuMCJF!5e0!3m2!1sen!2sin!4v1634567890123!5m2!1sen!2sin"
                 width="100%"
@@ -74,6 +81,7 @@ export function ContactSection() {
                 allowFullScreen={true}
                 loading="lazy"
                 title="School Location"
+                className="grayscale group-hover:grayscale-0 transition-all duration-700 contrast-125"
               ></iframe>
             </motion.div>
           </div>
@@ -82,3 +90,4 @@ export function ContactSection() {
     </section>
   );
 }
+
