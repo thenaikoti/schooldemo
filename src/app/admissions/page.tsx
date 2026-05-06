@@ -96,7 +96,7 @@ export default function AdmissionsPage() {
             <h2 className="text-4xl md:text-5xl font-black text-neutral-900 dark:text-white mb-6 tracking-tight">Admission FAQs</h2>
             <p className="text-xl text-neutral-600 dark:text-neutral-400 font-medium">Common questions answered for prospective parents.</p>
           </div>
-          <Accordion type="single" collapsible className="w-full space-y-4">
+          <Accordion className="w-full space-y-4">
             {[
               { q: "What is the age criteria for Pre-Primary admission?", a: "For Nursery, the child should be 3 years of age as on 31st March of the year of admission." },
               { q: "Do you provide school transport?", a: "Yes, we have a fleet of Air-Conditioned, GPS-enabled buses covering most parts of the city." },
