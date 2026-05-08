@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { GraduationCap, Mail, Phone, MapPin, ArrowRight, Instagram, Facebook, Twitter, Linkedin, Globe } from "lucide-react";
+import { GraduationCap, Mail, Phone, MapPin, ArrowRight, Camera, Play, Users, Globe } from "lucide-react";
 import { SITE_CONFIG } from "@/constants/site";
 import { Button } from "./v2/Primitives";
 
@@ -28,7 +28,7 @@ export function Footer() {
               Cultivating an elite learning environment where global innovation meets traditional values to shape the leaders of tomorrow.
             </p>
             <div className="flex gap-4">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
+              {[Camera, Play, Users, Globe].map((Icon, i) => (
                 <Link key={i} href="#" className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-neutral-400 hover:bg-primary hover:text-white transition-all duration-300">
                   <Icon className="w-5 h-5" />
                 </Link>
