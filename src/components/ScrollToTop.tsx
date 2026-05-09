@@ -39,26 +39,5 @@ export function ScrollToTop() {
     });
   };
 
-  return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.button
-          initial={{ opacity: 0, scale: 0.8, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.8, y: 20 }}
-          onClick={scrollToTop}
-          className={cn(
-            "fixed bottom-24 right-6 sm:bottom-28 sm:right-10 z-[60]",
-            "w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center",
-            "bg-neutral-900 text-white shadow-2xl hover:bg-black transition-colors duration-300",
-            "border border-white/10 group overflow-hidden"
-          )}
-          aria-label="Scroll to top"
-        >
-          <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-          <ArrowUp className="w-5 h-5 sm:w-6 sm:h-6 relative z-10 transition-transform group-hover:-translate-y-1" />
-        </motion.button>
-      )}
-    </AnimatePresence>
-  );
+  return null;
 }
