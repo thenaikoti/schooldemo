@@ -59,12 +59,12 @@ export function DashboardPreview() {
               <h3 className="text-2xl font-black tracking-tight">Portal Overview</h3>
               <p className="text-neutral-500 text-sm font-medium">Real-time updates across academics and campus life.</p>
             </div>
-            <div className="flex gap-4">
-              <button className="h-12 px-6 rounded-xl bg-neutral-800 hover:bg-neutral-700 transition-colors text-sm font-bold border border-neutral-700 flex items-center gap-2">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+              <button className="h-10 sm:h-12 px-4 sm:px-6 rounded-xl bg-neutral-800 hover:bg-neutral-700 transition-colors text-xs sm:text-sm font-bold border border-neutral-700 flex items-center justify-center gap-2">
                 <Calendar className="w-4 h-4" />
                 Last 30 Days
               </button>
-              <button className="h-12 px-6 rounded-xl bg-primary hover:bg-primary/90 transition-all text-sm font-bold shadow-lg shadow-primary/20 flex items-center gap-2">
+              <button className="h-10 sm:h-12 px-4 sm:px-6 rounded-xl bg-primary hover:bg-primary/90 transition-all text-xs sm:text-sm font-bold shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
                 <Plus className="w-4 h-4" />
                 New Entry
               </button>

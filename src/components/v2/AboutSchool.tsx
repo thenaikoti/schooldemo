@@ -31,7 +31,7 @@ export function AboutSchool() {
 
   return (
     <SectionWrapper id="about" className="bg-white">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
         <div>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -52,13 +52,13 @@ export function AboutSchool() {
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-2 gap-8 border-t border-neutral-100 pt-12">
+          <div className="mt-12 grid grid-cols-2 gap-6 sm:gap-8 border-t border-neutral-100 pt-12">
             <div>
-              <p className="text-4xl font-black text-neutral-900 mb-1">15+</p>
+              <p className="text-3xl sm:text-4xl font-black text-neutral-900 mb-1">15+</p>
               <p className="text-xs font-black uppercase tracking-widest text-neutral-400">Years of Legacy</p>
             </div>
             <div>
-              <p className="text-4xl font-black text-neutral-900 mb-1">2000+</p>
+              <p className="text-3xl sm:text-4xl font-black text-neutral-900 mb-1">2000+</p>
               <p className="text-xs font-black uppercase tracking-widest text-neutral-400">Global Alumni</p>
             </div>
           </div>
@@ -72,7 +72,7 @@ export function AboutSchool() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group p-8 rounded-[2.5rem] bg-neutral-50 border border-neutral-100 hover:bg-white hover:shadow-2xl hover:shadow-neutral-200/50 transition-all duration-500"
+              className="group p-6 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] bg-neutral-50 border border-neutral-100 hover:bg-white hover:shadow-2xl hover:shadow-neutral-200/50 transition-all duration-500"
             >
               <div className="flex items-start gap-6">
                 <div className={`w-16 h-16 rounded-2xl ${pillar.bg} flex items-center justify-center ${pillar.color} flex-shrink-0 transition-transform duration-500 group-hover:rotate-6`}>

@@ -40,7 +40,7 @@ export function ContactForm() {
                 </div>
                 <div>
                   <p className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-1">{item.label}</p>
-                  <p className="text-xl font-bold text-neutral-900 mb-1">{item.val}</p>
+                  <p className="text-lg sm:text-xl font-bold text-neutral-900 mb-1 break-all sm:break-normal">{item.val}</p>
                   <button className="text-sm font-bold text-primary hover:underline">{item.action} →</button>
                 </div>
               </div>

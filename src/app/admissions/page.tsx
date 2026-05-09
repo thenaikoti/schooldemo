@@ -21,7 +21,7 @@ export default function AdmissionsPage() {
 
       {/* Requirements & Dates */}
       <SectionWrapper className="bg-white dark:bg-neutral-950">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Requirements */}
           <div>
             <motion.div

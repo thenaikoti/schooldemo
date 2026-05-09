@@ -67,7 +67,7 @@ export function TrustSection() {
           <p className="text-xl text-neutral-600 font-medium leading-relaxed mb-10">
             We understand that choosing a school is one of the most important decisions for your family. Here is why parents choose us.
           </p>
-          <div className="p-8 rounded-[2rem] bg-white border border-neutral-100 shadow-xl shadow-neutral-200/50">
+          <div className="p-6 sm:p-8 rounded-[2rem] bg-white border border-neutral-100 shadow-xl shadow-neutral-200/50">
              <p className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Satisfaction Rate</p>
              <p className="text-5xl font-black text-neutral-900 mb-2">99.2%</p>
              <p className="text-sm text-neutral-500 font-medium">Of our parents would recommend us to their friends and family.</p>

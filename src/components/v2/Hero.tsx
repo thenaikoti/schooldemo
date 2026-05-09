@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-screen flex items-center pt-32 md:pt-48 pb-16 md:pb-32 overflow-hidden bg-white">
+    <section className="relative w-full min-h-screen flex items-center pt-28 sm:pt-32 md:pt-48 pb-12 sm:pb-16 md:pb-32 overflow-hidden bg-white">
       {/* Background Subtle Pattern */}
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none">
         <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
@@ -38,7 +38,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tight text-neutral-900 mb-8 leading-[1.1] md:leading-[0.95]"
+              className="text-3xl sm:text-5xl md:text-8xl font-black tracking-tight text-neutral-900 mb-6 sm:mb-8 leading-[1.1] md:leading-[0.95]"
             >
               Nurturing <br />
               <span className="text-primary italic">Young Minds</span> <br />
@@ -49,7 +49,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl md:text-2xl text-neutral-600 mb-12 max-w-xl leading-relaxed font-medium"
+              className="text-lg sm:text-xl md:text-2xl text-neutral-600 mb-8 sm:mb-12 max-w-xl leading-relaxed font-medium"
             >
               We believe in a holistic approach to education, nurturing every child's unique talents and character to prepare them for a bright, purposeful future.
             </motion.p>
@@ -109,7 +109,7 @@ export function Hero() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="relative"
           >
-            <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] border-8 border-white bg-neutral-100">
+            <div className="relative aspect-[4/5] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] border-4 sm:border-8 border-white bg-neutral-100">
               <Image
                 src="/images/hero_campus_1776796274174.png"
                 alt="Students collaborating"

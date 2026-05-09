@@ -16,7 +16,7 @@ export function PageLayout({ children, title, subtitle, className }: PageLayoutP
   return (
     <main className={cn("min-h-screen pt-24", className)}>
       {/* Header Section */}
-      <section className="relative py-24 md:py-32 overflow-hidden bg-white dark:bg-neutral-950 border-b border-neutral-100 dark:border-neutral-900">
+      <section className="relative py-16 sm:py-24 md:py-32 overflow-hidden bg-white dark:bg-neutral-950 border-b border-neutral-100 dark:border-neutral-900">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/5 blur-[120px] rounded-full opacity-50" />
         </div>
@@ -33,7 +33,7 @@ export function PageLayout({ children, title, subtitle, className }: PageLayoutP
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-5xl md:text-7xl font-black text-neutral-900 dark:text-white mb-6 tracking-tight leading-[0.95]"
+              className="text-3xl sm:text-5xl md:text-7xl font-black text-neutral-900 dark:text-white mb-6 tracking-tight leading-[1.1] sm:leading-[0.95]"
             >
               {title}
             </motion.h1>

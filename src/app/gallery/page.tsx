@@ -37,8 +37,8 @@ export default function GalleryPage() {
     >
       <SectionWrapper className="bg-white dark:bg-neutral-950">
         {/* Filters */}
-        <div className="flex flex-wrap justify-center items-center gap-4 mb-20">
-          <div className="flex items-center gap-3 mr-6 text-neutral-400">
+        <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 mb-12 sm:mb-20">
+          <div className="flex items-center gap-3 mr-4 sm:mr-6 text-neutral-400">
             <Filter className="w-5 h-5" />
             <span className="font-black text-xs uppercase tracking-widest">Filter Media</span>
           </div>
@@ -61,7 +61,7 @@ export default function GalleryPage() {
         {/* Grid */}
         <motion.div 
           layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10"
         >
           <AnimatePresence mode="popLayout">
             {filteredImages.map((img, i) => (
@@ -72,7 +72,7 @@ export default function GalleryPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
-                className="group relative overflow-hidden rounded-[2.5rem] aspect-[4/5] bg-neutral-100 dark:bg-neutral-900 shadow-sm hover:shadow-2xl transition-all duration-500"
+                className="group relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] aspect-[4/5] bg-neutral-100 dark:bg-neutral-900 shadow-sm hover:shadow-2xl transition-all duration-500"
               >
                 <img
                   src={img.src}

@@ -25,14 +25,14 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen pt-24 bg-white dark:bg-neutral-950">
       {/* 1. HERO SECTION (CONVERSATION-FOCUSED) */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative py-16 sm:py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 blur-[120px] rounded-full -mr-96 -mt-96" />
           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-500/5 blur-[100px] rounded-full -ml-48 -mb-48" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
+          <div className="flex flex-col lg:flex-row gap-10 sm:gap-16 items-center">
             <div className="lg:w-3/5">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -46,7 +46,7 @@ export default function ContactPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-4xl sm:text-5xl md:text-8xl font-black text-neutral-900 dark:text-white mb-8 leading-[1.1] md:leading-[0.95] tracking-tight"
+                className="text-3xl sm:text-5xl md:text-8xl font-black text-neutral-900 dark:text-white mb-6 sm:mb-8 leading-[1.1] md:leading-[0.95] tracking-tight"
               >
                 Let's Build Your <br />
                 <span className="text-primary italic">Child's Future.</span>
@@ -55,7 +55,7 @@ export default function ContactPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 font-medium leading-relaxed mb-12 max-w-2xl"
+                className="text-lg sm:text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 font-medium leading-relaxed mb-8 sm:mb-12 max-w-2xl"
               >
                 We're more than just a school; we're a community dedicated to excellence. Reach out today for personal guidance on your child's educational journey.
               </motion.p>
@@ -65,14 +65,14 @@ export default function ContactPage() {
                 transition={{ delay: 0.3 }}
                 className="flex flex-col sm:flex-row gap-6"
               >
-                <Button size="lg" className="h-16 px-10 text-lg shadow-2xl shadow-primary/30 group" asChild>
+                <Button size="lg" className="h-14 sm:h-16 px-6 sm:px-10 text-base sm:text-lg shadow-2xl shadow-primary/30 group" asChild>
                   <a href={`tel:${SITE_CONFIG.contact.phone.replace(/\s/g, '')}`}>
                     <Phone className="w-5 h-5 mr-2" />
                     {SITE_CONFIG.contact.phone}
                     <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" className="h-16 px-10 text-lg bg-white/50 backdrop-blur-sm" asChild>
+                <Button variant="outline" size="lg" className="h-14 sm:h-16 px-6 sm:px-10 text-base sm:text-lg bg-white/50 backdrop-blur-sm" asChild>
                   <a href="#inquiry-form">Fill Inquiry Form</a>
                 </Button>
               </motion.div>
@@ -84,15 +84,15 @@ export default function ContactPage() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="lg:w-2/5 relative"
             >
-              <div className="aspect-square rounded-[2rem] sm:rounded-[4rem] bg-neutral-100 dark:bg-neutral-900 relative overflow-hidden shadow-2xl border-8 border-white dark:border-neutral-800">
+              <div className="aspect-square rounded-[2rem] sm:rounded-[4rem] bg-neutral-100 dark:bg-neutral-900 relative overflow-hidden shadow-2xl border-4 sm:border-8 border-white dark:border-neutral-800">
                 <img 
                   src="/images/principal_portrait_1776796457936.png" 
                   alt="Contact Person" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <div className="absolute bottom-10 left-10 text-white">
-                  <p className="text-2xl font-black mb-1">Dr. Sarah Johnson</p>
+                <div className="absolute bottom-6 sm:bottom-10 left-6 sm:left-10 text-white">
+                  <p className="text-xl sm:text-2xl font-black mb-1">Dr. Sarah Johnson</p>
                   <p className="text-sm font-bold uppercase tracking-widest opacity-80">Head of Admissions</p>
                 </div>
               </div>
@@ -164,7 +164,7 @@ export default function ContactPage() {
               >
                 <Link href={href} className="block group">
                   <div className={cn(
-                    "w-full text-left p-6 sm:p-10 rounded-[3rem] transition-all duration-500 border relative overflow-hidden",
+                    "w-full text-left p-6 sm:p-10 rounded-[2rem] sm:rounded-[3rem] transition-all duration-500 border relative overflow-hidden",
                     item.highlight 
                       ? "bg-neutral-950 text-white border-neutral-950 shadow-2xl shadow-black/20 group-hover:-translate-y-2" 
                       : "bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white border-neutral-100 dark:border-neutral-800 group-hover:shadow-2xl group-hover:-translate-y-2"
@@ -264,7 +264,7 @@ export default function ContactPage() {
 
       {/* 4. LOCATION SECTION (RESTRUCTURED) */}
       <SectionWrapper className="bg-neutral-50 dark:bg-neutral-900/30">
-        <div className="flex flex-col lg:flex-row gap-20 items-center">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
           <div className="lg:w-1/2">
             <h2 className="text-4xl md:text-6xl font-black text-neutral-900 dark:text-white mb-8 leading-tight tracking-tight">
               Visit Our <br />
@@ -277,7 +277,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-sm font-black text-neutral-400 uppercase tracking-widest mb-2">Primary Address</p>
-                  <p className="text-2xl font-black text-neutral-900 dark:text-white mb-2 leading-tight">
+                  <p className="text-xl sm:text-2xl font-black text-neutral-900 dark:text-white mb-2 leading-tight">
                     {SITE_CONFIG.contact.address}
                   </p>
                   <Button variant="ghost" className="p-0 h-auto font-black text-primary hover:bg-transparent">
@@ -291,7 +291,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-sm font-black text-neutral-400 uppercase tracking-widest mb-2">Visiting Hours</p>
-                  <p className="text-2xl font-black text-neutral-900 dark:text-white">Mon – Sat: 8:00 AM – 4:00 PM</p>
+                  <p className="text-xl sm:text-2xl font-black text-neutral-900 dark:text-white">Mon – Sat: 8:00 AM – 4:00 PM</p>
                 </div>
               </div>
             </div>
@@ -342,13 +342,13 @@ export default function ContactPage() {
 
       {/* 6. FINAL CTA + FORM (CONVERSION FOCUS) */}
       <SectionWrapper>
-        <div className="flex flex-col lg:flex-row gap-20 items-center">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
           <div className="lg:w-1/2">
             <h2 className="text-4xl md:text-6xl font-black text-neutral-900 dark:text-white mb-8 leading-[1.1] tracking-tight">
               Request Your <br />
               <span className="text-primary italic">2026 Prospectus.</span>
             </h2>
-            <div className="p-8 rounded-[2.5rem] bg-amber-500/10 border border-amber-500/20 mb-12 flex items-center gap-6">
+            <div className="p-6 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] bg-amber-500/10 border border-amber-500/20 mb-8 sm:mb-12 flex items-center gap-4 sm:gap-6">
               <div className="w-16 h-16 rounded-[1.5rem] bg-amber-500 flex items-center justify-center text-white shrink-0">
                 <Zap className="w-8 h-8 fill-current" />
               </div>
@@ -368,7 +368,7 @@ export default function ContactPage() {
                   <div className="w-6 h-6 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-600">
                     <ShieldCheck className="w-4 h-4" />
                   </div>
-                  <span className="text-xl font-bold text-neutral-800 dark:text-neutral-200 tracking-tight">{item}</span>
+                  <span className="text-lg sm:text-xl font-bold text-neutral-800 dark:text-neutral-200 tracking-tight">{item}</span>
                 </div>
               ))}
             </div>

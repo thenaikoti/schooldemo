@@ -43,7 +43,7 @@ export function StudentLife() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-4 md:gap-6 h-[800px] sm:h-[1000px] md:h-[800px]">
+      <div className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-3 sm:gap-4 md:gap-6 h-[500px] sm:h-[600px] md:h-[800px]">
         {activities.map((item, i) => (
           <motion.div
             key={item.id}

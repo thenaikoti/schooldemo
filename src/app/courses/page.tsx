@@ -19,7 +19,7 @@ export default function ProgramsPage() {
 
       {/* Curriculum Highlights */}
       <SectionWrapper className="bg-white dark:bg-neutral-950">
-        <div className="flex flex-col lg:flex-row gap-20 items-center">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
           <div className="lg:w-1/2">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -51,7 +51,7 @@ export default function ProgramsPage() {
             </div>
           </div>
           
-          <div className="lg:w-1/2 grid grid-cols-2 gap-6">
+          <div className="lg:w-1/2 grid grid-cols-2 gap-4 sm:gap-6">
             {[
               "/images/pre_primary_kids_1776796536863.png",
               "/images/primary_education_students_1776796553414.png",
@@ -64,7 +64,7 @@ export default function ProgramsPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: i * 0.1 }}
                 className={cn(
-                  "relative aspect-square rounded-[2rem] overflow-hidden border-4 border-white dark:border-neutral-900 shadow-xl",
+                  "relative aspect-square rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border-2 sm:border-4 border-white dark:border-neutral-900 shadow-xl",
                   i % 2 === 1 ? "sm:mt-12" : ""
                 )}
               >

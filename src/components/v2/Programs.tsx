@@ -66,7 +66,7 @@ export function Programs() {
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
           >
-            <Card className="h-full p-10 bg-white border-neutral-100 group">
+            <Card className="h-full p-6 sm:p-10 bg-white border-neutral-100 group">
               <div className="w-14 h-14 rounded-2xl bg-neutral-50 flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-500 group-hover:rotate-6">
                 <prog.icon className="w-7 h-7" />
               </div>

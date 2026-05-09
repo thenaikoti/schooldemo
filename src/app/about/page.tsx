@@ -63,7 +63,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white dark:border-neutral-900"
+              className="aspect-[4/3] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl border-4 sm:border-8 border-white dark:border-neutral-900"
             >
               <Image
                 src="/images/about_school_campus_1776796440311.png"
@@ -75,7 +75,7 @@ export default function AboutPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="absolute -bottom-10 -left-10 bg-neutral-950 text-white p-10 rounded-[2.5rem] shadow-2xl hidden md:block"
+              className="absolute -bottom-10 -left-10 bg-neutral-950 text-white p-6 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl hidden md:block"
             >
               <p className="text-5xl font-black mb-2">25+</p>
               <p className="text-sm font-bold uppercase tracking-widest text-neutral-400">Years of Heritage</p>
@@ -156,7 +156,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
             >
               <h2 className="text-primary font-black uppercase tracking-widest text-sm mb-6">Message from the Principal</h2>
-              <blockquote className="text-3xl md:text-5xl font-medium mb-10 leading-[1.1] italic tracking-tight">
+              <blockquote className="text-xl sm:text-3xl md:text-5xl font-medium mb-8 sm:mb-10 leading-[1.2] sm:leading-[1.1] italic tracking-tight">
                 "We don't just teach subjects; we nurture souls. Every child at Surya Academy is a world of potential waiting to be discovered."
               </blockquote>
               <div className="space-y-6 text-xl text-neutral-400 font-medium leading-relaxed mb-10">
