@@ -10,7 +10,7 @@ const steps = [
     title: "Online Registration",
     desc: "Complete the initial enquiry and registration form on our website.",
     icon: UserPlus,
-    color: "bg-blue-500"
+    color: "bg-primary"
   },
   {
     title: "Document Submission",

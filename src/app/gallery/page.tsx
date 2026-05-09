@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState } from "react";
 import { PageLayout } from "@/components/v2/PageLayout";
 import { SectionWrapper } from "@/components/v2/SectionWrapper";
@@ -106,8 +107,12 @@ export default function GalleryPage() {
             Book a personalized campus tour and see our state-of-the-art facilities and vibrant learning environment first-hand.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-             <Button size="lg" className="h-16 px-12 text-lg">Apply for Admission</Button>
-             <Button size="lg" variant="outline" className="h-16 px-12 text-lg border-white/20 hover:bg-white hover:text-neutral-900">Contact Admissions</Button>
+             <Link href="/admissions">
+               <Button size="lg" className="h-16 px-12 text-lg w-full sm:w-auto">Apply for Admission</Button>
+             </Link>
+             <Link href="/contact">
+               <Button size="lg" variant="outline" className="h-16 px-12 text-lg border-white/20 hover:bg-white hover:text-neutral-900 w-full sm:w-auto">Contact Admissions</Button>
+             </Link>
           </div>
         </div>
       </SectionWrapper>

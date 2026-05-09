@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "@/components/v2/SectionWrapper";
@@ -64,13 +65,15 @@ export default function ContactPage() {
                 transition={{ delay: 0.3 }}
                 className="flex flex-col sm:flex-row gap-6"
               >
-                <Button size="lg" className="h-16 px-10 text-lg shadow-2xl shadow-primary/30 group">
-                  <Phone className="w-5 h-5 mr-2" />
-                  +91 98765 43210
-                  <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                <Button size="lg" className="h-16 px-10 text-lg shadow-2xl shadow-primary/30 group" asChild>
+                  <a href={`tel:${SITE_CONFIG.contact.phone.replace(/\s/g, '')}`}>
+                    <Phone className="w-5 h-5 mr-2" />
+                    {SITE_CONFIG.contact.phone}
+                    <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                  </a>
                 </Button>
-                <Button variant="outline" size="lg" className="h-16 px-10 text-lg bg-white/50 backdrop-blur-sm">
-                  Fill Inquiry Form
+                <Button variant="outline" size="lg" className="h-16 px-10 text-lg bg-white/50 backdrop-blur-sm" asChild>
+                  <a href="#inquiry-form">Fill Inquiry Form</a>
                 </Button>
               </motion.div>
             </div>
@@ -148,6 +151,9 @@ export default function ContactPage() {
             },
           ].map((item, i) => {
             const Icon = item.icon;
+            const href = item.title === "Call Now" ? `tel:${SITE_CONFIG.contact.phone.replace(/\s/g, '')}` : 
+                         item.title === "WhatsApp" ? `https://wa.me/${SITE_CONFIG.contact.whatsapp}` :
+                         item.title === "Email Us" ? `mailto:${SITE_CONFIG.contact.email}` : "#inquiry-form";
             return (
               <motion.div
                 key={item.title}
@@ -156,32 +162,33 @@ export default function ContactPage() {
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
               >
-                <button className={cn(
-                  "w-full group text-left p-10 rounded-[3rem] transition-all duration-500 border relative overflow-hidden",
-                  item.highlight 
-                    ? "bg-neutral-950 text-white border-neutral-950 shadow-2xl shadow-black/20 hover:-translate-y-2" 
-                    : "bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white border-neutral-100 dark:border-neutral-800 hover:shadow-2xl hover:-translate-y-2"
-                )}>
+                <Link href={href} className="block group">
                   <div className={cn(
-                    "w-16 h-16 rounded-2xl flex items-center justify-center mb-10 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6",
-                    item.highlight ? "bg-primary text-white" : "bg-neutral-50 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400"
+                    "w-full text-left p-10 rounded-[3rem] transition-all duration-500 border relative overflow-hidden",
+                    item.highlight 
+                      ? "bg-neutral-950 text-white border-neutral-950 shadow-2xl shadow-black/20 group-hover:-translate-y-2" 
+                      : "bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white border-neutral-100 dark:border-neutral-800 group-hover:shadow-2xl group-hover:-translate-y-2"
                   )}>
-                    <Icon className="w-8 h-8" />
+                    <div className={cn(
+                      "w-16 h-16 rounded-2xl flex items-center justify-center mb-10 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6",
+                      item.highlight ? "bg-primary text-white" : "bg-neutral-50 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400"
+                    )}>
+                      <Icon className="w-8 h-8" />
+                    </div>
+                    <h3 className="text-2xl font-black mb-3 tracking-tight">{item.title}</h3>
+                    <p className={cn(
+                      "text-lg font-medium transition-colors",
+                      item.highlight ? "text-neutral-400" : "text-neutral-500 dark:text-neutral-500"
+                    )}>
+                      {item.desc}
+                    </p>
+                    <div className={cn(
+                      "mt-8 inline-flex items-center gap-2 font-black text-sm uppercase tracking-widest text-primary"
+                    )}>
+                      Connect Now <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-2" />
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-black mb-3 tracking-tight">{item.title}</h3>
-                  <p className={cn(
-                    "text-lg font-medium transition-colors",
-                    item.highlight ? "text-neutral-400" : "text-neutral-500 dark:text-neutral-500"
-                  )}>
-                    {item.desc}
-                  </p>
-                  <div className={cn(
-                    "mt-8 inline-flex items-center gap-2 font-black text-sm uppercase tracking-widest",
-                    item.highlight ? "text-primary" : "text-primary"
-                  )}>
-                    Connect Now <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-2" />
-                  </div>
-                </button>
+                </Link>
               </motion.div>
             );
           })}
@@ -304,9 +311,11 @@ export default function ContactPage() {
                   <h3 className="text-3xl font-black mb-2 tracking-tight">Need Help Now?</h3>
                   <p className="text-neutral-400 font-medium">Available for urgent enrollment queries.</p>
                 </div>
-                <Button size="lg" className="h-16 px-10 text-lg shadow-xl shadow-primary/20">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call Now
+                <Button size="lg" className="h-16 px-10 text-lg shadow-xl shadow-primary/20" asChild>
+                  <a href={`tel:${SITE_CONFIG.contact.phone.replace(/\s/g, '')}`}>
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call Now
+                  </a>
                 </Button>
               </div>
             </motion.div>
@@ -365,7 +374,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="lg:w-1/2 w-full">
+          <div className="lg:w-1/2 w-full" id="inquiry-form">
             <Card className="p-12 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)] dark:shadow-primary/5 border-none bg-white dark:bg-neutral-900 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16" />
               

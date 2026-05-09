@@ -17,7 +17,7 @@ const features = [
     title: "Global Standards",
     desc: "Curriculum aligned with international benchmarks for competitive edge.",
     icon: Globe,
-    color: "text-blue-500",
+    color: "text-primary",
   },
   {
     title: "Holistic Care",
