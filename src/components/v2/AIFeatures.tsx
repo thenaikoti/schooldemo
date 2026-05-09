@@ -19,8 +19,8 @@ const features = [
     title: "AI Inquiry Prioritization",
     desc: "Automatically identifies high-intent parents using behavioral data.",
     icon: Target,
-    color: "from-blue-500/20 to-blue-600/20",
-    iconColor: "text-blue-500",
+    color: "from-primary/20 to-primary/30",
+    iconColor: "text-primary",
     size: "lg"
   },
   {
