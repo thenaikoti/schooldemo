@@ -7,11 +7,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const mockMessages = [
-  { role: "assistant", text: "Hello! I'm your Surya Academy AI Assistant. How can I help you today?", delay: 500 },
+  { role: "assistant", text: "Hello! Welcome to Surya Academy. How can I assist you with your child's enrollment today?", delay: 500 },
   { role: "user", text: "What is the admission process for Grade 6?", delay: 2000 },
-  { role: "assistant", text: "For Grade 6, the process is simple: 1. Fill the online form, 2. Submit previous school records, and 3. Schedule a campus interaction. Would you like me to book a tour for you?", delay: 4000 },
+  { role: "assistant", text: "For Grade 6, we've made it simple: 1. Fill our online inquiry form, 2. Share previous school reports, and 3. Visit us for a campus interaction. Shall I help you schedule a visit?", delay: 4000 },
   { role: "user", text: "Yes, that would be great!", delay: 6000 },
-  { role: "assistant", text: "Wonderful! I've shared the available slots to your WhatsApp. You'll receive a confirmation shortly.", delay: 8000 },
+  { role: "assistant", text: "Wonderful! I've sent the available visit slots to your WhatsApp. We look forward to meeting you soon.", delay: 8000 },
 ];
 
 export function AIChatPreview() {
@@ -31,22 +31,22 @@ export function AIChatPreview() {
         <div className="lg:w-1/2">
           <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-bold text-primary mb-6">
             <Sparkles className="w-4 h-4" />
-            AI-Powered Admissions
+            Support for Every Parent
           </div>
           <h2 className="text-4xl md:text-6xl font-black text-neutral-900 dark:text-white mb-8 leading-tight">
-            Meet Your <br />
-            <span className="text-primary">24/7 Virtual Counselor.</span>
+            Instant Assistance, <br />
+            <span className="text-primary">Anytime You Need It.</span>
           </h2>
           <p className="text-xl text-neutral-600 dark:text-neutral-400 mb-10 leading-relaxed font-medium">
-            Our intelligent AI assistant handles complex inquiries, schedules tours, and guides parents through the entire admission funnel instantly.
+            Our smart assistant is here to help with your questions, from fee structures to campus visits, providing immediate support for your family's needs.
           </p>
           
           <ul className="space-y-4 mb-10">
             {[
-              "Instant response to parent queries",
-              "Automated tour & interview scheduling",
-              "Multi-language support for global parents",
-              "Seamless handover to human staff"
+              "Immediate answers to your questions",
+              "Easy tour and interview scheduling",
+              "Inclusive support for our community",
+              "Connect with our admissions team effortlessly"
             ].map((feature, i) => (
               <motion.li 
                 key={i}
@@ -62,7 +62,7 @@ export function AIChatPreview() {
           </ul>
 
           <Button size="lg" className="h-16 px-10 shadow-2xl shadow-primary/20">
-            Explore AI Capabilities
+            Experience Our Support
           </Button>
         </div>
 
@@ -78,8 +78,8 @@ export function AIChatPreview() {
                   <div className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-green-500 border-4 border-white dark:border-neutral-900" />
                 </div>
                 <div>
-                  <h4 className="font-black text-neutral-900 dark:text-white">Admissions Bot</h4>
-                  <p className="text-xs font-bold text-green-500 uppercase tracking-widest">Online & Ready</p>
+                  <h4 className="font-black text-neutral-900 dark:text-white">Admissions Guide</h4>
+                  <p className="text-xs font-bold text-green-500 uppercase tracking-widest">Always Here to Help</p>
                 </div>
               </div>
               <div className="flex gap-2">

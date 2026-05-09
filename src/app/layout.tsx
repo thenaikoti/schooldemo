@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/v2/Navbar";
 import { Footer } from "@/components/v2/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { LeadGen } from "@/components/LeadGen";
 import { SITE_CONFIG } from "@/constants/site";
 
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} min-h-screen flex flex-col antialiased`}>
+        <ScrollToTop />
         <Navbar />
         <main className="grow flex flex-col pt-0">
           {children}

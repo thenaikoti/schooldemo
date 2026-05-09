@@ -90,21 +90,21 @@ export default function AboutPage() {
           {[
             {
               title: "Our Mission",
-              desc: "To inspire, educate and empower our students through a comprehensive and innovative curriculum.",
+              desc: "To nurture holistic development by fostering curiosity, character, and competence in every student.",
               icon: Flag,
               color: "text-rose-500",
               bg: "bg-rose-50"
             },
             {
               title: "Our Vision",
-              desc: "To be a leading global educational institution that fosters a culture of excellence and integrity.",
+              desc: "To empower every child to become a compassionate, future-ready leader who makes a positive impact on the world.",
               icon: Target,
               color: "text-primary",
               bg: "bg-primary/5"
             },
             {
               title: "Our Values",
-              desc: "We value integrity, respect, and a dedication to innovation in everything we do for our students.",
+              desc: "Integrity, Respect, and Excellence form the foundation of our vibrant and inclusive educational community.",
               icon: Rocket,
               color: "text-purple-500",
               bg: "bg-purple-50"
@@ -157,16 +157,16 @@ export default function AboutPage() {
             >
               <h2 className="text-primary font-black uppercase tracking-widest text-sm mb-6">Message from the Principal</h2>
               <blockquote className="text-3xl md:text-5xl font-medium mb-10 leading-[1.1] italic tracking-tight">
-                "Surya Academy is more than just a school; it's a vibrant community where curiosity is celebrated and every voice matters."
+                "We don't just teach subjects; we nurture souls. Every child at Surya Academy is a world of potential waiting to be discovered."
               </blockquote>
               <div className="space-y-6 text-xl text-neutral-400 font-medium leading-relaxed mb-10">
                 <p>
-                  Education today is about building character and preparing global citizens who can think critically and act with empathy.
+                  In a rapidly changing world, our priority is to provide a safe, inspiring environment where students can build the confidence to lead with purpose and heart.
                 </p>
               </div>
               <div>
                 <p className="text-2xl font-black text-white">Dr. Sarah Johnson</p>
-                <p className="text-neutral-500 font-bold uppercase tracking-widest text-sm">Head of Institution</p>
+                <p className="text-neutral-500 font-bold uppercase tracking-widest text-sm">Principal, Surya Academy</p>
               </div>
             </motion.div>
           </div>

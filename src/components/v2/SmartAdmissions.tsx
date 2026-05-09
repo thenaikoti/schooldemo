@@ -21,18 +21,18 @@ export function SmartAdmissions() {
           </motion.div>
           
           <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">
-            Seamless <br />
-            <span className="text-primary italic">Smart Admissions.</span>
+            A Nurturing <br />
+            <span className="text-primary italic">Admissions Experience.</span>
           </h2>
           <p className="text-xl text-neutral-400 font-medium leading-relaxed mb-12">
-            We've simplified the admission journey using intelligent systems that provide instant support and real-time updates for parents.
+            We have simplified the admission journey to ensure you spend less time on paperwork and more time planning your child's future.
           </p>
 
           <div className="space-y-8 mb-12">
             {[
-              { icon: MessageSquare, title: "Instant Assistance", desc: "Our intelligent assistant answers your queries 24/7." },
-              { icon: Calendar, title: "Easy Scheduling", desc: "Book campus tours and interactions with a single click." },
-              { icon: ClipboardCheck, title: "Digital Tracking", desc: "Follow your application progress in real-time." }
+              { icon: MessageSquare, title: "Instant Support", desc: "Get immediate answers to common admissions queries anytime." },
+              { icon: Calendar, title: "Campus Visits", desc: "Easily schedule a tour to experience our vibrant community." },
+              { icon: ClipboardCheck, title: "Clear Milestones", desc: "Follow your child's application progress with transparency." }
             ].map((item, i) => (
               <motion.div
                 key={item.title}
@@ -95,7 +95,7 @@ export function SmartAdmissions() {
                </div>
 
                <div className="mt-6 pt-6 border-t border-white/5 flex items-center justify-between">
-                 <p className="text-xs text-neutral-600 font-black uppercase tracking-widest">Powered by AI Admissions v2.0</p>
+                 <p className="text-xs text-neutral-600 font-black uppercase tracking-widest">Nurturing connection with smart technology</p>
                  <ArrowRight className="w-5 h-5 text-neutral-600" />
                </div>
              </div>

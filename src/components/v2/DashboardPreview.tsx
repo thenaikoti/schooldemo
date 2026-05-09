@@ -15,10 +15,10 @@ import {
 import { motion } from "framer-motion";
 
 const stats = [
-  { label: "Total Inquiries", value: "1,284", change: "+12.5%", icon: MessageSquare, color: "text-primary", bg: "bg-primary/10" },
-  { label: "Admission Rate", value: "64.2%", change: "+4.3%", icon: TrendingUp, color: "text-emerald-500", bg: "bg-emerald-500/10" },
-  { label: "Parent Engagement", value: "89%", change: "+2.1%", icon: Users, color: "text-amber-500", bg: "bg-amber-500/10" },
-  { label: "Inquiry Sources", value: "5 Unique", change: "Stable", icon: PieChartIcon, color: "text-purple-500", bg: "bg-purple-500/10" },
+  { label: "Happy Parents", value: "1,284", change: "+12.5%", icon: MessageSquare, color: "text-primary", bg: "bg-primary/10" },
+  { label: "Student Progress", value: "94.2%", change: "+4.3%", icon: TrendingUp, color: "text-emerald-500", bg: "bg-emerald-500/10" },
+  { label: "Campus Activities", value: "89", change: "+2.1%", icon: Users, color: "text-amber-500", bg: "bg-amber-500/10" },
+  { label: "Academic Awards", value: "45 Unique", change: "Stable", icon: PieChartIcon, color: "text-purple-500", bg: "bg-purple-500/10" },
 ];
 
 const recentInquiries = [
@@ -37,14 +37,14 @@ export function DashboardPreview() {
           className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-bold text-white/80 mb-6 backdrop-blur-md border border-white/10"
         >
           <PieChartIcon className="w-4 h-4" />
-          School Operating System v2.0
+          Seamless Portal Experience
         </motion.div>
         <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">
-          Total Visibility for <br />
-          <span className="text-primary italic">Modern Leadership.</span>
+          Stay Connected with <br />
+          <span className="text-primary italic">Your Child's World.</span>
         </h2>
         <p className="text-xl text-neutral-400 font-medium leading-relaxed">
-          The Principal's Dashboard provides real-time insights into your institution's growth, engagement, and operational health.
+          Our parent portal provides real-time insights into your child's learning journey, milestones, and daily school life.
         </p>
       </div>
 
@@ -56,8 +56,8 @@ export function DashboardPreview() {
           {/* Dashboard Header */}
           <div className="flex flex-col md:flex-row md:items-center justify-between p-8 border-b border-neutral-800 bg-neutral-900/50 backdrop-blur-xl">
             <div className="mb-6 md:mb-0">
-              <h3 className="text-2xl font-black tracking-tight">Analytics Overview</h3>
-              <p className="text-neutral-500 text-sm font-medium">Real-time performance metrics across all departments.</p>
+              <h3 className="text-2xl font-black tracking-tight">Portal Overview</h3>
+              <p className="text-neutral-500 text-sm font-medium">Real-time updates across academics and campus life.</p>
             </div>
             <div className="flex gap-4">
               <button className="h-12 px-6 rounded-xl bg-neutral-800 hover:bg-neutral-700 transition-colors text-sm font-bold border border-neutral-700 flex items-center gap-2">
@@ -101,7 +101,7 @@ export function DashboardPreview() {
               {/* Main Chart Area Placeholder */}
               <div className="lg:col-span-2 p-8 rounded-[2rem] bg-neutral-950 border border-neutral-800">
                 <div className="flex items-center justify-between mb-10">
-                  <h4 className="text-xl font-bold">Admission Funnel</h4>
+                  <h4 className="text-xl font-bold">Academic Growth</h4>
                   <MoreHorizontal className="text-neutral-500 w-6 h-6" />
                 </div>
                 {/* Visual Representation of Chart */}
@@ -133,7 +133,7 @@ export function DashboardPreview() {
 
               {/* Sidebar: Recent Activity */}
               <div className="p-8 rounded-[2rem] bg-neutral-950 border border-neutral-800">
-                <h4 className="text-xl font-bold mb-8">Live Inquiries</h4>
+                <h4 className="text-xl font-bold mb-8">Recent Updates</h4>
                 <div className="space-y-6">
                   {recentInquiries.map((inquiry, i) => (
                     <div key={i} className="flex items-center gap-4 group cursor-pointer">

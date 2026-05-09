@@ -177,8 +177,8 @@ export default function ContactPage() {
                     </div>
                     <h3 className="text-2xl font-black mb-3 tracking-tight">{item.title}</h3>
                     <p className={cn(
-                      "text-lg font-medium transition-colors",
-                      item.highlight ? "text-neutral-400" : "text-neutral-500 dark:text-neutral-500"
+                      "text-lg font-medium transition-colors break-words relative z-10",
+                      item.highlight ? "text-neutral-300" : "text-neutral-600 dark:text-neutral-300"
                     )}>
                       {item.desc}
                     </p>

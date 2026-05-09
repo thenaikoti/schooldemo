@@ -23,31 +23,31 @@ const steps = [
   },
   { 
     id: 2, 
-    label: "AI Assistant", 
-    desc: "Instant qualification", 
+    label: "Parent Support", 
+    desc: "Personalized assistance", 
     icon: Bot, 
     color: "text-primary", 
     bg: "bg-primary/10" 
   },
   { 
     id: 3, 
-    label: "Smart Tracking", 
-    desc: "Lead prioritization", 
+    label: "Guided Steps", 
+    desc: "Clear milestones", 
     icon: Zap, 
     color: "text-amber-500", 
     bg: "bg-amber-500/10" 
   },
   { 
     id: 4, 
-    label: "Auto Follow-up", 
-    desc: "WhatsApp automation", 
+    label: "Always Connected", 
+    desc: "Timely updates", 
     icon: MessageCircle, 
     color: "text-emerald-500", 
     bg: "bg-emerald-500/10" 
   },
   { 
     id: 5, 
-    label: "Final Admission", 
+    label: "Warm Welcome", 
     desc: "Seamless enrollment", 
     icon: CheckSquare, 
     color: "text-purple-500", 
@@ -60,11 +60,11 @@ export function AutomationWorkflow() {
     <SectionWrapper id="workflow" className="bg-white dark:bg-neutral-950">
       <div className="text-center max-w-3xl mx-auto mb-24">
         <h2 className="text-4xl md:text-6xl font-black text-neutral-900 dark:text-white mb-8 leading-tight tracking-tight">
-          Admissions on <br />
-          <span className="text-primary italic">Autopilot.</span>
+          A Seamless Parent <br />
+          <span className="text-primary italic">Journey.</span>
         </h2>
         <p className="text-xl text-neutral-600 dark:text-neutral-400 font-medium leading-relaxed">
-          From the first "hello" to the final admission, our intelligent workflow automates every step of the parent journey.
+          We provide a nurturing and efficient experience, ensuring every family receives personal attention from inquiry to enrollment.
         </p>
       </div>
 
@@ -124,8 +124,8 @@ export function AutomationWorkflow() {
             <Zap className="w-8 h-8 fill-current" />
           </div>
           <div>
-            <h4 className="text-2xl font-black text-neutral-900 dark:text-white">Workflow Efficiency</h4>
-            <p className="text-neutral-500 font-medium">Auto-pilot reduces manual effort by 85%.</p>
+            <h4 className="text-2xl font-black text-neutral-900 dark:text-white">A Supportive Experience</h4>
+            <p className="text-neutral-500 font-medium">Our smart systems ensure no query goes unanswered.</p>
           </div>
         </div>
         <div className="flex gap-12">

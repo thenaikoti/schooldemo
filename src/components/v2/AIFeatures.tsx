@@ -16,48 +16,48 @@ import { motion } from "framer-motion";
 
 const features = [
   {
-    title: "AI Inquiry Prioritization",
-    desc: "Automatically identifies high-intent parents using behavioral data.",
+    title: "Personalized Care",
+    desc: "Every inquiry is handled with the attention and care your family deserves.",
     icon: Target,
     color: "from-primary/20 to-primary/30",
     iconColor: "text-primary",
     size: "lg"
   },
   {
-    title: "Automated Follow-Ups",
-    desc: "Nurtures leads across WhatsApp and Email without human intervention.",
+    title: "Timely Communication",
+    desc: "Stay updated on your child's progress and school events with seamless notifications.",
     icon: MessageSquare,
     color: "from-emerald-500/20 to-emerald-600/20",
     iconColor: "text-emerald-500",
     size: "md"
   },
   {
-    title: "Real-Time Dashboard",
-    desc: "Visualizes every stage of the admission funnel in real-time.",
+    title: "Parent Portal",
+    desc: "A dedicated space for parents to manage schedules, performance, and school news.",
     icon: BarChart3,
     color: "from-amber-500/20 to-amber-600/20",
     iconColor: "text-amber-500",
     size: "md"
   },
   {
-    title: "AI Communication",
-    desc: "Personalized communication assistant for admission staff.",
+    title: "Instant Support",
+    desc: "Get immediate answers to your admissions queries through our smart assistance.",
     icon: Bot,
     color: "from-primary/20 to-primary/30",
     iconColor: "text-primary",
     size: "lg"
   },
   {
-    title: "Secure Data Vault",
-    desc: "Enterprise-grade security for student and parent information.",
+    title: "Student Privacy",
+    desc: "Top-tier security standards to protect your family's sensitive data and privacy.",
     icon: ShieldCheck,
     color: "from-purple-500/20 to-purple-600/20",
     iconColor: "text-purple-500",
     size: "md"
   },
   {
-    title: "Mobile-First Experience",
-    desc: "Fully operational dashboard and management from any mobile device.",
+    title: "Universal Access",
+    desc: "Access the school portal anytime, anywhere, on any device for your convenience.",
     icon: Smartphone,
     color: "from-rose-500/20 to-rose-600/20",
     iconColor: "text-rose-500",
@@ -76,11 +76,11 @@ export function AIFeatures() {
             className="w-12 h-1 bg-primary mb-8"
           />
           <h2 className="text-4xl md:text-6xl font-black text-neutral-900 dark:text-white mb-6 leading-tight tracking-tight">
-            Infrastructure for <br />
-            <span className="text-primary italic">Elite Institutions.</span>
+            A Supportive <br />
+            <span className="text-primary italic">Learning Community.</span>
           </h2>
           <p className="text-xl text-neutral-600 dark:text-neutral-400 font-medium leading-relaxed">
-            Replace fragmented systems with a unified, AI-first platform designed for modern school operations.
+            Our school ecosystem integrates modern technology with traditional values to create a seamless experience for families.
           </p>
         </div>
       </div>

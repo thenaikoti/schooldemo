@@ -4,7 +4,7 @@ export const SITE_CONFIG = {
   description: "Shaping Future Leaders with Excellence in Education",
   contact: {
     phone: "+91 98765 43210",
-    email: "admissions@suryaacademy.edu.in",
+    email: "admissions@suryaacademy.com",
     address: "123 Academic Pl, Education Hub, Bangalore, Karnataka 560001",
     whatsapp: "919876543210"
   },

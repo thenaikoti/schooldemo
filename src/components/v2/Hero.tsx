@@ -41,8 +41,8 @@ export function Hero() {
               className="text-6xl md:text-8xl font-black tracking-tight text-neutral-900 mb-8 leading-[0.95]"
             >
               Nurturing <br />
-              <span className="text-primary italic">Global Leaders</span> <br />
-              of Tomorrow.
+              <span className="text-primary italic">Young Minds</span> <br />
+              for a Brighter Future.
             </motion.h1>
 
             <motion.p
@@ -51,7 +51,7 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl md:text-2xl text-neutral-600 mb-12 max-w-xl leading-relaxed font-medium"
             >
-              At Surya Academy, we blend academic rigor with emotional intelligence to prepare students for a rapidly evolving world.
+              We believe in a holistic approach to education, nurturing every child's unique talents and character to prepare them for a bright, purposeful future.
             </motion.p>
 
             <motion.div
