@@ -65,7 +65,7 @@ export default function ProgramsPage() {
                 transition={{ delay: i * 0.1 }}
                 className={cn(
                   "relative aspect-square rounded-[2rem] overflow-hidden border-4 border-white dark:border-neutral-900 shadow-xl",
-                  i % 2 === 1 ? "mt-12" : ""
+                  i % 2 === 1 ? "sm:mt-12" : ""
                 )}
               >
                 <img src={img} alt="program" className="w-full h-full object-cover" />

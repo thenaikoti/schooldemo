@@ -117,7 +117,7 @@ export function AutomationWorkflow() {
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="mt-32 p-10 rounded-[3rem] bg-neutral-50 dark:bg-neutral-900/50 border border-neutral-100 dark:border-neutral-800 flex flex-col md:flex-row items-center justify-between gap-10"
+        className="mt-32 p-6 sm:p-10 rounded-[3rem] bg-neutral-50 dark:bg-neutral-900/50 border border-neutral-100 dark:border-neutral-800 flex flex-col md:flex-row items-center justify-between gap-10"
       >
         <div className="flex items-center gap-6">
           <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30">
@@ -128,18 +128,18 @@ export function AutomationWorkflow() {
             <p className="text-neutral-500 font-medium">Our smart systems ensure no query goes unanswered.</p>
           </div>
         </div>
-        <div className="flex gap-12">
+        <div className="grid grid-cols-2 sm:flex sm:gap-12 gap-8 w-full md:w-auto">
           <div className="text-center">
-            <p className="text-3xl font-black text-neutral-900 dark:text-white">2.5s</p>
-            <p className="text-xs font-bold text-neutral-400 uppercase tracking-widest mt-1">Avg Response</p>
+            <p className="text-2xl sm:text-3xl font-black text-neutral-900 dark:text-white">2.5s</p>
+            <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest mt-1">Avg Response</p>
           </div>
           <div className="text-center">
-            <p className="text-3xl font-black text-neutral-900 dark:text-white">100%</p>
-            <p className="text-xs font-bold text-neutral-400 uppercase tracking-widest mt-1">Lead Captured</p>
+            <p className="text-2xl sm:text-3xl font-black text-neutral-900 dark:text-white">100%</p>
+            <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest mt-1">Care Rate</p>
           </div>
-          <div className="text-center">
-            <p className="text-3xl font-black text-neutral-900 dark:text-white">24/7</p>
-            <p className="text-xs font-bold text-neutral-400 uppercase tracking-widest mt-1">Availability</p>
+          <div className="text-center col-span-2 sm:col-span-1">
+            <p className="text-2xl sm:text-3xl font-black text-neutral-900 dark:text-white">24/7</p>
+            <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest mt-1">Support Availability</p>
           </div>
         </div>
       </motion.div>

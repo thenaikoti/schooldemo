@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 export function Footer() {
   return (
-    <footer className="bg-neutral-950 text-neutral-400 pt-32 pb-16">
+    <footer className="bg-neutral-950 text-neutral-400 pt-20 sm:pt-32 pb-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-24">
           {/* Brand Column */}
@@ -83,7 +83,7 @@ export function Footer() {
           <p className="text-xs font-black uppercase tracking-[0.2em] text-neutral-600">
             © 2026 Surya Academy. Excellence in Education.
           </p>
-          <div className="flex gap-10">
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
             {["Privacy Policy", "Terms of Use", "Sitemap"].map(link => (
               <Link key={link} href="#" className="text-[10px] font-black uppercase tracking-[0.2em] hover:text-white transition-colors">{link}</Link>
             ))}

@@ -47,7 +47,7 @@ export default function GalleryPage() {
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={cn(
-                "rounded-full px-10 py-3 text-sm font-black transition-all duration-500 tracking-tight",
+                "rounded-full px-6 py-2 sm:px-10 sm:py-3 text-sm font-black transition-all duration-500 tracking-tight",
                 activeCategory === cat 
                   ? "bg-primary text-white shadow-xl shadow-primary/30 scale-105" 
                   : "bg-neutral-50 dark:bg-neutral-900 text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800"
@@ -79,7 +79,7 @@ export default function GalleryPage() {
                   alt={img.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-10">
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6 sm:p-10">
                   <span className="text-primary text-xs font-black mb-2 uppercase tracking-[0.2em]">{img.category}</span>
                   <h4 className="text-white text-2xl font-black mb-6 tracking-tight">{img.title}</h4>
                   <button className="w-14 h-14 rounded-2xl bg-white text-primary flex items-center justify-center transition-all hover:scale-110 hover:rotate-6">
@@ -100,7 +100,7 @@ export default function GalleryPage() {
       </SectionWrapper>
 
       {/* CTA Section */}
-      <SectionWrapper className="bg-neutral-950 text-white text-center rounded-[4rem] mx-4 mb-20">
+      <SectionWrapper className="bg-neutral-950 text-white text-center rounded-[2rem] sm:rounded-[4rem] mx-4 mb-20">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">Experience it in person.</h2>
           <p className="text-xl text-neutral-400 font-medium mb-12 leading-relaxed">

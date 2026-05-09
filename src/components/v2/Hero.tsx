@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-white">
+    <section className="relative w-full min-h-screen flex items-center pt-32 md:pt-48 pb-16 md:pb-32 overflow-hidden bg-white">
       {/* Background Subtle Pattern */}
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none">
         <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +28,7 @@ export function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 rounded-full bg-primary/5 px-4 py-1.5 text-xs font-bold text-primary mb-8 border border-primary/10 tracking-[0.1em] uppercase"
+              className="inline-flex items-center gap-2 rounded-full bg-primary/5 px-4 py-1.5 text-[10px] sm:text-xs font-bold text-primary mb-8 border border-primary/10 tracking-[0.1em] uppercase"
             >
               <Star className="w-3 h-3 fill-current" />
               Excellence in Global Education
@@ -38,7 +38,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="text-6xl md:text-8xl font-black tracking-tight text-neutral-900 mb-8 leading-[0.95]"
+              className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tight text-neutral-900 mb-8 leading-[1.1] md:leading-[0.95]"
             >
               Nurturing <br />
               <span className="text-primary italic">Young Minds</span> <br />

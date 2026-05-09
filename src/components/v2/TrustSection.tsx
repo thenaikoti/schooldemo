@@ -82,7 +82,7 @@ export function TrustSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-10 rounded-[2.5rem] bg-white border border-neutral-100 hover:shadow-2xl hover:shadow-neutral-200/50 transition-all duration-500"
+              className="p-6 sm:p-10 rounded-[2.5rem] bg-white border border-neutral-100 hover:shadow-2xl hover:shadow-neutral-200/50 transition-all duration-500"
             >
               <div className={`w-14 h-14 rounded-2xl ${reason.color} flex items-center justify-center ${reason.iconColor} mb-8`}>
                 <reason.icon className="w-7 h-7" />

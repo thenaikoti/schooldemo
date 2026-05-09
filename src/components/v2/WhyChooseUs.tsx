@@ -95,7 +95,7 @@ export function WhyChooseUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
               >
-                <Card className="p-12 border-none bg-neutral-50/50 dark:bg-neutral-900/50 hover:bg-white dark:hover:bg-neutral-900 shadow-sm hover:shadow-2xl transition-all duration-500 group">
+                <Card className="p-6 sm:p-12 border-none bg-neutral-50/50 dark:bg-neutral-900/50 hover:bg-white dark:hover:bg-neutral-900 shadow-sm hover:shadow-2xl transition-all duration-500 group">
                   <Icon className={cn("w-12 h-12 mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3", feature.color)} />
                   <h3 className="text-2xl font-black text-neutral-900 dark:text-white mb-4 tracking-tight">
                     {feature.title}

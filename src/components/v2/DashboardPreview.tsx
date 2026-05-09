@@ -29,7 +29,7 @@ const recentInquiries = [
 
 export function DashboardPreview() {
   return (
-    <SectionWrapper id="dashboard-preview" className="bg-neutral-950 text-white rounded-[4rem] mx-4 my-20">
+    <SectionWrapper id="dashboard-preview" className="bg-neutral-950 text-white rounded-[2rem] sm:rounded-[4rem] mx-4 my-20">
       <div className="text-center max-w-3xl mx-auto mb-20">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -54,7 +54,7 @@ export function DashboardPreview() {
         
         <Card className="bg-neutral-900 border-neutral-800 p-0 overflow-hidden shadow-2xl relative z-10" hover={false}>
           {/* Dashboard Header */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between p-8 border-b border-neutral-800 bg-neutral-900/50 backdrop-blur-xl">
+          <div className="flex flex-col md:flex-row md:items-center justify-between p-6 sm:p-8 border-b border-neutral-800 bg-neutral-900/50 backdrop-blur-xl">
             <div className="mb-6 md:mb-0">
               <h3 className="text-2xl font-black tracking-tight">Portal Overview</h3>
               <p className="text-neutral-500 text-sm font-medium">Real-time updates across academics and campus life.</p>
@@ -71,7 +71,7 @@ export function DashboardPreview() {
             </div>
           </div>
 
-          <div className="p-8">
+          <div className="p-6 sm:p-8">
             {/* Stats Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {stats.map((stat, i) => (
@@ -99,13 +99,13 @@ export function DashboardPreview() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Main Chart Area Placeholder */}
-              <div className="lg:col-span-2 p-8 rounded-[2rem] bg-neutral-950 border border-neutral-800">
+              <div className="lg:col-span-2 p-4 sm:p-8 rounded-[2rem] bg-neutral-950 border border-neutral-800">
                 <div className="flex items-center justify-between mb-10">
                   <h4 className="text-xl font-bold">Academic Growth</h4>
                   <MoreHorizontal className="text-neutral-500 w-6 h-6" />
                 </div>
                 {/* Visual Representation of Chart */}
-                <div className="flex items-end gap-3 h-[250px] w-full px-4">
+                <div className="flex items-end gap-2 sm:gap-3 h-[200px] sm:h-[250px] w-full px-2 sm:px-4">
                   {[40, 65, 45, 90, 55, 80, 70, 85, 60, 95].map((h, i) => (
                     <motion.div
                       key={i}
@@ -132,7 +132,7 @@ export function DashboardPreview() {
               </div>
 
               {/* Sidebar: Recent Activity */}
-              <div className="p-8 rounded-[2rem] bg-neutral-950 border border-neutral-800">
+              <div className="p-6 sm:p-8 rounded-[2rem] bg-neutral-950 border border-neutral-800">
                 <h4 className="text-xl font-bold mb-8">Recent Updates</h4>
                 <div className="space-y-6">
                   {recentInquiries.map((inquiry, i) => (

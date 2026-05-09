@@ -90,7 +90,7 @@ export function AIChatPreview() {
             </div>
 
             {/* Chat Messages */}
-            <div className="h-[450px] overflow-y-auto p-8 space-y-6 flex flex-col bg-neutral-50/30 dark:bg-neutral-950/30">
+            <div className="h-[350px] sm:h-[450px] overflow-y-auto p-4 sm:p-8 space-y-6 flex flex-col bg-neutral-50/30 dark:bg-neutral-950/30">
               <AnimatePresence>
                 {visibleMessages.map((msg, i) => (
                   <motion.div

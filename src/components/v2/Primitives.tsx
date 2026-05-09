@@ -64,7 +64,7 @@ export function Card({ children, className, hover = true, variant = "default" }:
 
   return (
     <div className={cn(
-      "rounded-[2.5rem] border p-8 transition-all duration-500",
+      "rounded-[2.5rem] border p-6 sm:p-8 transition-all duration-500",
       variants[variant],
       hover && "hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] dark:hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:-translate-y-2",
       className

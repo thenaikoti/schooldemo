@@ -93,7 +93,7 @@ export function AIFeatures() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.1 }}
           >
-            <Card className="h-full group relative overflow-hidden p-10 border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm">
+            <Card className="h-full group relative overflow-hidden p-6 sm:p-10 border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm">
               <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${feature.color} rounded-full -mr-16 -mt-16 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
               
               <div className={`w-16 h-16 rounded-2xl bg-neutral-50 dark:bg-neutral-950 flex items-center justify-center ${feature.iconColor} mb-8 transition-all duration-500 group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 border border-neutral-100 dark:border-neutral-800`}>

@@ -116,7 +116,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
             >
-              <Card className="p-10 border-none shadow-sm hover:shadow-2xl transition-all duration-500">
+              <Card className="p-6 sm:p-10 border-none shadow-sm hover:shadow-2xl transition-all duration-500">
                 <div className={cn("w-16 h-16 rounded-2xl flex items-center justify-center mb-8", item.bg, `dark:${item.bg}/10`)}>
                   <item.icon className={cn("w-8 h-8", item.color)} />
                 </div>
@@ -132,7 +132,7 @@ export default function AboutPage() {
 
       {/* Principal's Message */}
       <SectionWrapper>
-        <div className="bg-neutral-950 rounded-[4rem] p-10 md:p-20 flex flex-col lg:flex-row items-center gap-16 relative overflow-hidden">
+        <div className="bg-neutral-950 rounded-[2.5rem] sm:rounded-[4rem] p-8 sm:p-20 flex flex-col lg:flex-row items-center gap-16 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 blur-[100px] rounded-full -mr-48 -mt-48" />
           
           <motion.div 

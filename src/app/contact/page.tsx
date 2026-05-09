@@ -46,7 +46,7 @@ export default function ContactPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-5xl md:text-8xl font-black text-neutral-900 dark:text-white mb-8 leading-[0.95] tracking-tight"
+                className="text-4xl sm:text-5xl md:text-8xl font-black text-neutral-900 dark:text-white mb-8 leading-[1.1] md:leading-[0.95] tracking-tight"
               >
                 Let's Build Your <br />
                 <span className="text-primary italic">Child's Future.</span>
@@ -84,7 +84,7 @@ export default function ContactPage() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="lg:w-2/5 relative"
             >
-              <div className="aspect-square rounded-[4rem] bg-neutral-100 dark:bg-neutral-900 relative overflow-hidden shadow-2xl border-8 border-white dark:border-neutral-800">
+              <div className="aspect-square rounded-[2rem] sm:rounded-[4rem] bg-neutral-100 dark:bg-neutral-900 relative overflow-hidden shadow-2xl border-8 border-white dark:border-neutral-800">
                 <img 
                   src="/images/principal_portrait_1776796457936.png" 
                   alt="Contact Person" 
@@ -164,7 +164,7 @@ export default function ContactPage() {
               >
                 <Link href={href} className="block group">
                   <div className={cn(
-                    "w-full text-left p-10 rounded-[3rem] transition-all duration-500 border relative overflow-hidden",
+                    "w-full text-left p-6 sm:p-10 rounded-[3rem] transition-all duration-500 border relative overflow-hidden",
                     item.highlight 
                       ? "bg-neutral-950 text-white border-neutral-950 shadow-2xl shadow-black/20 group-hover:-translate-y-2" 
                       : "bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white border-neutral-100 dark:border-neutral-800 group-hover:shadow-2xl group-hover:-translate-y-2"
@@ -299,7 +299,7 @@ export default function ContactPage() {
             {/* 5. IMMEDIATE ASSISTANCE BLOCK */}
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="p-10 rounded-[3rem] bg-neutral-950 text-white shadow-2xl relative overflow-hidden group"
+              className="p-6 sm:p-10 rounded-[2.5rem] sm:rounded-[3rem] bg-neutral-950 text-white shadow-2xl relative overflow-hidden group"
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[80px] rounded-full -mr-32 -mt-32 transition-all duration-700 group-hover:scale-150" />
               <div className="flex flex-col sm:flex-row items-center justify-between gap-8 relative z-10">
@@ -324,7 +324,7 @@ export default function ContactPage() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            className="lg:w-1/2 w-full h-[600px] rounded-[4rem] overflow-hidden shadow-2xl border-8 border-white dark:border-neutral-900 bg-white dark:bg-neutral-900"
+            className="lg:w-1/2 w-full h-[400px] sm:h-[600px] rounded-[2rem] sm:rounded-[4rem] overflow-hidden shadow-2xl border-8 border-white dark:border-neutral-900 bg-white dark:bg-neutral-900"
           >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15551.921876523992!2d77.5936!3d12.9724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzIwLjEiTiA3N8KwMzUnMzcuMCJF!5e0!3m2!1sen!2sin!4v1634567890123!5m2!1sen!2sin"
@@ -375,7 +375,7 @@ export default function ContactPage() {
           </div>
 
           <div className="lg:w-1/2 w-full" id="inquiry-form">
-            <Card className="p-12 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)] dark:shadow-primary/5 border-none bg-white dark:bg-neutral-900 relative overflow-hidden">
+            <Card className="p-6 sm:p-12 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)] dark:shadow-primary/5 border-none bg-white dark:bg-neutral-900 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16" />
               
               <h3 className="text-3xl font-black text-neutral-900 dark:text-white mb-2">Get Personal Guidance</h3>
@@ -400,7 +400,7 @@ export default function ContactPage() {
                   </div>
                 </div>
                 
-                <Button size="lg" className="w-full h-20 text-xl shadow-2xl shadow-primary/30 group bg-neutral-950 text-white hover:bg-black dark:bg-white dark:text-neutral-950 dark:hover:bg-neutral-100">
+                <Button size="lg" className="w-full h-16 sm:h-20 text-lg sm:text-xl shadow-2xl shadow-primary/30 group bg-neutral-950 text-white hover:bg-black dark:bg-white dark:text-neutral-950 dark:hover:bg-neutral-100">
                   Connect via WhatsApp
                   <Send className="w-6 h-6 ml-2 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </Button>

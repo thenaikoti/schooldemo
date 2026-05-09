@@ -63,7 +63,7 @@ export function ContactForm() {
 
         {/* Right Form */}
         <div className="lg:w-1/2 w-full">
-          <Card className="p-12 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)] border-none bg-white relative overflow-hidden">
+          <Card className="p-6 sm:p-12 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)] border-none bg-white relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16" />
             
             <h3 className="text-3xl font-black text-neutral-900 mb-2">Request Prospectus</h3>
