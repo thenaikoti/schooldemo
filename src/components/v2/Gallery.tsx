@@ -57,9 +57,10 @@ export function Gallery() {
               src={image.src}
               alt={image.title}
               fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
               <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                 <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">
                   {image.category}

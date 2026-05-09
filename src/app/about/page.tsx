@@ -69,6 +69,7 @@ export default function AboutPage() {
                 src="/images/about_school_campus_1776796440311.png"
                 alt="School Campus"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </motion.div>
@@ -138,13 +139,14 @@ export default function AboutPage() {
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            className="lg:w-1/3 relative z-10"
+            className="lg:w-1/3 w-full max-w-[280px] mx-auto lg:max-w-none relative z-10"
           >
             <div className="aspect-square rounded-full overflow-hidden border-8 border-white/10 shadow-2xl">
               <Image
                 src="/images/principal_portrait_1776796457936.png"
                 alt="Principal"
                 fill
+                sizes="(max-width: 1024px) 280px, 33vw"
                 className="object-cover"
               />
             </div>

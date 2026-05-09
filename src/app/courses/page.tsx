@@ -7,6 +7,7 @@ import { SectionWrapper } from "@/components/v2/SectionWrapper";
 import { Card, Button } from "@/components/v2/Primitives";
 import { BookOpen, Lightbulb, Trophy, Globe, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ProgramsPage() {
   return (
@@ -68,7 +69,7 @@ export default function ProgramsPage() {
                   i % 2 === 1 ? "sm:mt-12" : ""
                 )}
               >
-                <img src={img} alt="program" className="w-full h-full object-cover" />
+                <Image src={img} alt="program" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
               </motion.div>
             ))}
           </div>

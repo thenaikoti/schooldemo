@@ -114,6 +114,7 @@ export function Hero() {
                 src="/images/hero_campus_1776796274174.png"
                 alt="Students collaborating"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
                 priority
               />

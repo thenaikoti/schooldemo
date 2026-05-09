@@ -43,7 +43,7 @@ export function StudentLife() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-3 sm:gap-4 md:gap-6 h-[500px] sm:h-[600px] md:h-[800px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-3 sm:gap-4 md:gap-6 md:h-[800px]">
         {activities.map((item, i) => (
           <motion.div
             key={item.id}
@@ -53,17 +53,21 @@ export function StudentLife() {
             transition={{ delay: i * 0.1 }}
             className={cn(
               "relative rounded-[1.5rem] sm:rounded-[2.5rem] overflow-hidden group bg-neutral-100",
-              item.span
+              // On mobile: simple stacked cards with aspect ratio
+              // On md+: use the span layout
+              item.span.split(" ").map(s => `md:${s}`).join(" "),
+              "aspect-[16/10] sm:aspect-[4/3] md:aspect-auto"
             )}
           >
             <Image
               src={item.src}
               alt={item.title}
               fill
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
               className="object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 sm:p-10">
-              <h4 className="text-xl sm:text-2xl font-black text-white tracking-tight">{item.title}</h4>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-4 sm:p-6 md:p-10">
+              <h4 className="text-lg sm:text-xl md:text-2xl font-black text-white tracking-tight">{item.title}</h4>
               <p className="text-white/70 font-medium text-xs sm:text-sm mt-1 sm:mt-2">Discover more →</p>
             </div>
           </motion.div>

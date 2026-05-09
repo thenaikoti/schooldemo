@@ -51,7 +51,7 @@ export function ContactForm() {
             <div className="flex -space-x-3">
               {[1, 2, 3, 4].map(i => (
                 <div key={i} className="w-10 h-10 rounded-full border-4 border-white bg-neutral-200 overflow-hidden">
-                  <img src={`https://i.pravatar.cc/100?u=${i}`} alt="parent" />
+                  <img src={`https://i.pravatar.cc/100?u=${i}`} alt="parent" className="w-full h-full object-cover" />
                 </div>
               ))}
             </div>
