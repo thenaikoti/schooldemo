@@ -15,7 +15,7 @@ import {
 import { motion } from "framer-motion";
 
 const stats = [
-  { label: "Total Inquiries", value: "1,284", change: "+12.5%", icon: MessageSquare, color: "text-blue-500", bg: "bg-blue-500/10" },
+  { label: "Total Inquiries", value: "1,284", change: "+12.5%", icon: MessageSquare, color: "text-primary", bg: "bg-primary/10" },
   { label: "Admission Rate", value: "64.2%", change: "+4.3%", icon: TrendingUp, color: "text-emerald-500", bg: "bg-emerald-500/10" },
   { label: "Parent Engagement", value: "89%", change: "+2.1%", icon: Users, color: "text-amber-500", bg: "bg-amber-500/10" },
   { label: "Inquiry Sources", value: "5 Unique", change: "Stable", icon: PieChartIcon, color: "text-purple-500", bg: "bg-purple-500/10" },
@@ -23,7 +23,7 @@ const stats = [
 
 const recentInquiries = [
   { name: "Rahul Sharma", grade: "Grade 6", time: "2m ago", status: "Hot", color: "bg-orange-500" },
-  { name: "Priya Patel", grade: "Pre-Primary", time: "15m ago", status: "Contacted", color: "bg-blue-500" },
+  { name: "Priya Patel", grade: "Pre-Primary", time: "15m ago", status: "Contacted", color: "bg-primary" },
   { name: "Anita Desai", grade: "Grade 11", time: "1h ago", status: "Follow-up", color: "bg-emerald-500" },
 ];
 
@@ -50,7 +50,7 @@ export function DashboardPreview() {
 
       <div className="relative group">
         {/* Decorative Background Glow */}
-        <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 via-purple-500/30 to-blue-500/30 rounded-[3rem] blur-3xl opacity-20 group-hover:opacity-40 transition duration-1000" />
+        <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 via-purple-500/30 to-indigo-500/30 rounded-[3rem] blur-3xl opacity-20 group-hover:opacity-40 transition duration-1000" />
         
         <Card className="bg-neutral-900 border-neutral-800 p-0 overflow-hidden shadow-2xl relative z-10" hover={false}>
           {/* Dashboard Header */}

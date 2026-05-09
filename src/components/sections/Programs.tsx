@@ -9,7 +9,7 @@ const programs = [
     href: "#pre-primary",
     cta: "Learn more",
     Icon: BookOpen,
-    background: <div className="absolute inset-0 bg-blue-500/10 dark:bg-blue-500/20" />,
+    background: <div className="absolute inset-0 bg-primary/10 dark:bg-primary/20" />,
     className: "col-span-3 lg:col-span-1",
   },
   {
@@ -78,7 +78,7 @@ export function Programs() {
     <section className="container py-24" id="programs">
       <div className="flex flex-col gap-4 text-center max-w-3xl mx-auto mb-16">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-neutral-900 dark:text-neutral-50">
-          Academic <span className="text-primary text-blue-600 dark:text-blue-500">Excellence</span>
+          Academic <span className="text-primary">Excellence</span>
         </h2>
         <p className="text-lg text-neutral-600 dark:text-neutral-400">
           We offer a comprehensive curriculum that challenges and inspires students at every stage of their educational journey.

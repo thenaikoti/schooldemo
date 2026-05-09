@@ -16,8 +16,8 @@ const reasons = [
     title: "Expert Faculty",
     desc: "Highly qualified educators dedicated to personalized student development.",
     icon: UserCheck,
-    color: "bg-blue-50",
-    iconColor: "text-blue-600"
+    color: "bg-primary/5",
+    iconColor: "text-primary"
   },
   {
     title: "Nurturing Environment",

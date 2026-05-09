@@ -25,7 +25,7 @@ function Counter({ value }: { value: string }) {
 }
 
 const stats = [
-  { label: "Students Enrolled", subtext: "Across all campuses", value: "2,500+", icon: Users, color: "text-blue-500", bg: "bg-blue-50" },
+  { label: "Students Enrolled", subtext: "Across all campuses", value: "2,500+", icon: Users, color: "text-primary", bg: "bg-primary/10" },
   { label: "Expert Educators", subtext: "Ph.D & Master qualified", value: "150+", icon: GraduationCap, color: "text-purple-500", bg: "bg-purple-50" },
   { label: "Years of Legacy", subtext: "Est. since 2001", value: "25+", icon: Award, color: "text-orange-500", bg: "bg-orange-50" },
   { label: "Global Partners", subtext: "University tie-ups", value: "40+", icon: Globe, color: "text-emerald-500", bg: "bg-emerald-50" },

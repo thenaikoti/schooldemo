@@ -10,8 +10,8 @@ export function AboutSchool() {
       title: "Global Vision",
       desc: "Preparing students for a connected world with a curriculum that transcends borders.",
       icon: GraduationCap,
-      color: "text-blue-600",
-      bg: "bg-blue-50"
+      color: "text-primary",
+      bg: "bg-primary/5"
     },
     {
       title: "Future Ready",
