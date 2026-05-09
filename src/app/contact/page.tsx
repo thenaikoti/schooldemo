@@ -66,7 +66,7 @@ export default function ContactPage() {
               >
                 <Button size="lg" className="h-16 px-10 text-lg shadow-2xl shadow-primary/30 group">
                   <Phone className="w-5 h-5 mr-2" />
-                  Call Admissions
+                  +91 98765 43210
                   <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
                 </Button>
                 <Button variant="outline" size="lg" className="h-16 px-10 text-lg bg-white/50 backdrop-blur-sm">
@@ -122,7 +122,7 @@ export default function ContactPage() {
               title: "Call Now", 
               desc: SITE_CONFIG.contact.phone, 
               icon: Phone, 
-              color: "bg-blue-500",
+              color: "bg-primary",
               highlight: true 
             },
             { 

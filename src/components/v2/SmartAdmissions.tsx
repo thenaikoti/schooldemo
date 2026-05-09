@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import { SectionWrapper } from "./SectionWrapper";
 import { Card, Button } from "./Primitives";
@@ -52,12 +53,16 @@ export function SmartAdmissions() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6">
-            <Button size="lg" className="h-16 px-10 text-lg shadow-2xl shadow-primary/20">
-              Apply Now
-            </Button>
-            <Button variant="outline" size="lg" className="h-16 px-10 text-lg border-white/10 hover:bg-white hover:text-neutral-900">
-              Inquire via WhatsApp
-            </Button>
+            <Link href="/admissions" passHref legacyBehavior>
+              <Button size="lg" className="h-16 px-10 text-lg shadow-2xl shadow-primary/20">
+                Apply Now
+              </Button>
+            </Link>
+            <Link href="/contact" passHref legacyBehavior>
+              <Button variant="outline" size="lg" className="h-16 px-10 text-lg border-white/10 hover:bg-white hover:text-neutral-900">
+                Inquire via WhatsApp
+              </Button>
+            </Link>
           </div>
         </div>
 

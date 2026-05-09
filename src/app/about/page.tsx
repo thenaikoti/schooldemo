@@ -99,8 +99,8 @@ export default function AboutPage() {
               title: "Our Vision",
               desc: "To be a leading global educational institution that fosters a culture of excellence and integrity.",
               icon: Target,
-              color: "text-blue-500",
-              bg: "bg-blue-50"
+              color: "text-primary",
+              bg: "bg-primary/5"
             },
             {
               title: "Our Values",

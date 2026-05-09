@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import { SectionWrapper } from "./SectionWrapper";
 import { Button } from "./Primitives";
@@ -34,10 +35,12 @@ export function Gallery() {
             A visual journey through our vibrant campus, celebrating student achievements and daily academic excellence.
           </p>
         </div>
-        <Button variant="outline" size="lg" className="hidden md:flex h-16 px-10 font-bold group">
-          Explore All Media
-          <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-        </Button>
+        <Link href="/gallery" passHref legacyBehavior>
+          <Button variant="outline" size="lg" className="hidden md:flex h-16 px-10 font-bold group">
+            Explore All Media
+            <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+          </Button>
+        </Link>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

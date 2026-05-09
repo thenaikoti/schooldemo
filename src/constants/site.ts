@@ -1,10 +1,10 @@
 export const SITE_CONFIG = {
-  name: "Green Valley International School",
-  shortName: "GVIS",
+  name: "Surya Academy",
+  shortName: "Surya",
   description: "Shaping Future Leaders with Excellence in Education",
   contact: {
     phone: "+91 98765 43210",
-    email: "admissions@greenvalley.edu.in",
+    email: "admissions@suryaacademy.edu.in",
     address: "123 Academic Pl, Education Hub, Bangalore, Karnataka 560001",
     whatsapp: "919876543210"
   },

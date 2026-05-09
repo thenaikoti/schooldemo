@@ -33,9 +33,15 @@ export function Footer() {
           <div className="lg:col-span-2">
             <h4 className="text-white font-black uppercase tracking-widest text-xs mb-10">Institution</h4>
             <ul className="space-y-6">
-              {["Our Vision", "Leadership", "Admissions", "Academic Calendar", "Careers"].map(link => (
-                <li key={link}>
-                  <Link href="#" className="text-sm font-bold hover:text-primary transition-colors">{link}</Link>
+              {[
+                { name: "Our Vision", href: "/about" },
+                { name: "Leadership", href: "/about" },
+                { name: "Admissions", href: "/admissions" },
+                { name: "Academic Year", href: "/admissions" },
+                { name: "Contact Us", href: "/contact" }
+              ].map(link => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-sm font-bold hover:text-primary transition-colors">{link.name}</Link>
                 </li>
               ))}
             </ul>
@@ -46,7 +52,7 @@ export function Footer() {
             <ul className="space-y-6">
               {["Student Life", "Sports Academy", "Arts & Culture", "STEM Lab", "Global Alumni"].map(link => (
                 <li key={link}>
-                  <Link href="#" className="text-sm font-bold hover:text-primary transition-colors">{link}</Link>
+                  <Link href="/courses" className="text-sm font-bold hover:text-primary transition-colors">{link}</Link>
                 </li>
               ))}
             </ul>

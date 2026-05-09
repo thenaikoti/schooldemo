@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import { motion } from "framer-motion";
 import { Button } from "./Primitives";
@@ -59,14 +60,18 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-6 items-center"
             >
-              <Button size="lg" className="w-full sm:w-auto text-lg h-16 px-10 group rounded-2xl">
-                Start Admission
-                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-              </Button>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto text-lg h-16 px-10 group rounded-2xl border-neutral-200">
-                <Play className="w-4 h-4 fill-current mr-2" />
-                Campus Tour
-              </Button>
+              <Link href="/admissions" passHref legacyBehavior>
+                <Button size="lg" className="w-full sm:w-auto text-lg h-16 px-10 group rounded-2xl">
+                  Start Admission
+                  <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
+              <Link href="/gallery" passHref legacyBehavior>
+                <Button variant="outline" size="lg" className="w-full sm:w-auto text-lg h-16 px-10 group rounded-2xl border-neutral-200">
+                  <Play className="w-4 h-4 fill-current mr-2" />
+                  Campus Tour
+                </Button>
+              </Link>
             </motion.div>
 
             {/* Trust Indicators */}

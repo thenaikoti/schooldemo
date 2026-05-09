@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { SectionWrapper } from "./SectionWrapper";
 import { Button } from "./Primitives";
 import { ArrowRight, Calendar } from "lucide-react";
@@ -37,14 +38,18 @@ export function FinalCTA() {
             transition={{ delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
-            <Button size="lg" className="w-full sm:w-auto h-20 px-14 text-xl font-black group rounded-3xl shadow-2xl shadow-primary/30">
-              Apply for 2026-27
-              <ArrowRight className="w-6 h-6 ml-2 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto h-20 px-14 text-xl font-black border-white/10 hover:bg-white hover:text-neutral-900 group rounded-3xl">
-              <Calendar className="w-6 h-6 mr-3 transition-transform group-hover:scale-110" />
-              Book Campus Visit
-            </Button>
+              <Link href="/admissions" passHref legacyBehavior>
+                <Button size="lg" className="w-full sm:w-auto h-20 px-14 text-xl font-black group rounded-3xl shadow-2xl shadow-primary/30">
+                  Apply for 2026-27
+                  <ArrowRight className="w-6 h-6 ml-2 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
+              <Link href="/contact" passHref legacyBehavior>
+                <Button variant="outline" size="lg" className="w-full sm:w-auto h-20 px-14 text-xl font-black border-white/10 hover:bg-white hover:text-neutral-900 group rounded-3xl">
+                  <Calendar className="w-6 h-6 mr-3 transition-transform group-hover:scale-110" />
+                  Book Campus Visit
+                </Button>
+              </Link>
           </motion.div>
           
           <motion.p

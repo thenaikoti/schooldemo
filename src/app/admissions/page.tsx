@@ -59,7 +59,7 @@ export default function AdmissionsPage() {
           {/* Important Dates */}
           <div className="space-y-12">
             <div>
-              <h3 className="text-2xl font-black text-neutral-900 dark:text-white mb-8 border-l-4 border-primary pl-4 tracking-tight">Timeline 2026-27</h3>
+              <h3 className="text-2xl font-black text-neutral-900 dark:text-white mb-8 border-l-4 border-primary pl-4 tracking-tight">Academic Year 2026-27</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
                   { event: "Registration Commences", date: "October 1st, 2025", icon: ClipboardCheck },

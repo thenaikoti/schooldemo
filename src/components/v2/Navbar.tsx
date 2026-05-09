@@ -76,10 +76,12 @@ export function Navbar() {
 
         {/* Action Button */}
         <div className="hidden lg:flex items-center gap-6">
-          <Button variant="premium" size="sm" className="rounded-full shadow-xl hover:shadow-primary/20">
-            Enquire Now
-            <ArrowRight className="w-4 h-4" />
-          </Button>
+          <Link href="/contact" passHref legacyBehavior>
+            <Button variant="premium" size="sm" className="rounded-full shadow-xl hover:shadow-primary/20">
+              Enquire Now
+              <ArrowRight className="w-4 h-4" />
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -126,9 +128,11 @@ export function Navbar() {
                 transition={{ delay: 0.3 }}
                 className="pt-6 border-t border-neutral-100 dark:border-neutral-800"
               >
-                <Button variant="premium" className="w-full h-14 text-lg">
-                  Apply Now
-                </Button>
+                <Link href="/admissions" passHref legacyBehavior>
+                  <Button variant="premium" className="w-full h-14 text-lg">
+                    Apply Now
+                  </Button>
+                </Link>
               </motion.div>
             </div>
           </motion.div>

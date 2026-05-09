@@ -31,8 +31,8 @@ export function ContactForm() {
 
           <div className="space-y-10 mb-12">
             {[
-              { icon: Phone, label: "Immediate Assistance", val: "+91 (123) 456-7890", action: "Call Now" },
-              { icon: Mail, label: "Detailed Enquiries", val: "admissions@suryaacademy.edu", action: "Email Us" },
+              { icon: Phone, label: "Immediate Assistance", val: "+91 98765 43210", action: "Call Now" },
+              { icon: Mail, label: "Detailed Enquiries", val: "admissions@suryaacademy.edu.in", action: "Email Us" },
             ].map((item) => (
               <div key={item.label} className="flex items-center gap-6 group">
                 <div className="w-16 h-16 rounded-[1.5rem] bg-neutral-50 flex items-center justify-center transition-all duration-500 group-hover:bg-primary group-hover:rotate-6">
