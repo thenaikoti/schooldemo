@@ -58,12 +58,12 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-          <div className="lg:w-1/2 relative">
+          <div className="lg:w-1/2 w-full relative">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="aspect-[4/3] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl border-4 sm:border-8 border-white dark:border-neutral-900"
+              className="relative aspect-[4/3] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl border-4 sm:border-8 border-white dark:border-neutral-900"
             >
               <Image
                 src="/images/about_school_campus_1776796440311.png"
@@ -139,9 +139,9 @@ export default function AboutPage() {
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            className="lg:w-1/3 w-full max-w-[280px] mx-auto lg:max-w-none relative z-10"
+            className="lg:w-1/3 w-full max-w-[320px] sm:max-w-[360px] mx-auto lg:max-w-none relative z-10"
           >
-            <div className="aspect-square rounded-full overflow-hidden border-8 border-white/10 shadow-2xl">
+            <div className="relative aspect-square rounded-full overflow-hidden border-8 border-white/10 shadow-2xl">
               <Image
                 src="/images/principal_portrait_1776796457936.png"
                 alt="Principal"
