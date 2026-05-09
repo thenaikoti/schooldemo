@@ -48,7 +48,7 @@ const features = [
 export function WhyChooseUs() {
   return (
     <SectionWrapper className="bg-white dark:bg-neutral-950">
-      <div className="flex flex-col lg:flex-row gap-16 items-start">
+      <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
         <div className="lg:w-1/3 lg:sticky lg:top-32">
           <motion.div
             initial={{ opacity: 0, x: -20 }}

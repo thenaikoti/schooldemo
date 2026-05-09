@@ -16,7 +16,7 @@ const activities = [
 export function StudentLife() {
   return (
     <SectionWrapper id="student-life" className="bg-white">
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 mb-20">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 mb-12 md:mb-20">
         <div className="max-w-2xl">
           <h2 className="text-4xl md:text-6xl font-black text-neutral-900 mb-8 leading-tight tracking-tight">
             Vibrant <br />

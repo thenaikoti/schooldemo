@@ -22,7 +22,7 @@ export function Hero() {
       </div>
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content */}
           <div className="max-w-2xl">
             <motion.div

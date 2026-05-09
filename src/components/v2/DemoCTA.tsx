@@ -12,7 +12,7 @@ export function DemoCTA() {
         <div className="w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] animate-pulse" />
       </div>
 
-      <div className="relative z-10 p-8 sm:p-24 rounded-[2.5rem] sm:rounded-[4rem] bg-neutral-950 text-white overflow-hidden border border-white/10 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)]">
+      <div className="relative z-10 p-6 sm:p-12 md:p-24 rounded-[2.5rem] sm:rounded-[4rem] bg-neutral-950 text-white overflow-hidden border border-white/10 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)]">
         {/* Decorative Grid */}
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20" />
         <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />

@@ -197,7 +197,7 @@ export default function ContactPage() {
 
       {/* 3. TRUST SECTION (NEW) */}
       <SectionWrapper>
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20 gap-8">
           <div className="max-w-2xl">
             <h2 className="text-4xl md:text-6xl font-black text-neutral-900 dark:text-white mb-6 leading-tight tracking-tight">
               Why Parents <br />

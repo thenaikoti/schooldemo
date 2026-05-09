@@ -32,13 +32,23 @@ export function Navbar() {
     setMobileMenuOpen(false);
   }, [pathname]);
 
+  // Lock scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [mobileMenuOpen]);
+
   return (
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b",
-        scrolled
-          ? "bg-white/90 dark:bg-neutral-950/90 backdrop-blur-xl py-4 border-neutral-200 dark:border-neutral-800"
-          : "bg-transparent py-8 border-transparent"
+         scrolled
+          ? "bg-white/90 dark:bg-neutral-950/90 backdrop-blur-xl py-3 sm:py-4 border-neutral-200 dark:border-neutral-800"
+          : "bg-transparent py-5 sm:py-8 border-transparent"
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex items-center justify-between">
@@ -100,9 +110,9 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-neutral-950 border-b border-neutral-200 dark:border-neutral-800 overflow-hidden shadow-2xl"
+            className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-neutral-950 border-b border-neutral-200 dark:border-neutral-800 overflow-y-auto shadow-2xl" style={{ maxHeight: 'calc(100dvh - 100%)' }}
           >
-            <div className="p-6 flex flex-col gap-4">
+            <div className="p-6 pb-8 flex flex-col gap-3">
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.name}
@@ -113,7 +123,7 @@ export function Navbar() {
                   <Link
                     href={link.href}
                     className={cn(
-                      "text-2xl font-black tracking-tight flex items-center justify-between group",
+                      "text-xl sm:text-2xl font-black tracking-tight flex items-center justify-between group py-2",
                       pathname === link.href ? "text-primary" : "text-neutral-900 dark:text-white"
                     )}
                   >

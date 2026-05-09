@@ -18,7 +18,7 @@ export default function AboutPage() {
     >
       {/* Introduction */}
       <SectionWrapper>
-        <div className="flex flex-col lg:flex-row gap-20 items-center">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
           <div className="lg:w-1/2">
             <motion.div
               initial={{ opacity: 0, x: -20 }}

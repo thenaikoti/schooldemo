@@ -8,14 +8,14 @@ export function Footer() {
   return (
     <footer className="bg-neutral-950 text-neutral-400 pt-20 sm:pt-32 pb-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 sm:gap-16 mb-16 sm:mb-24">
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-10">
             <Link href="/" className="flex items-center gap-4 text-white">
               <div className="bg-primary p-3 rounded-2xl shadow-xl shadow-primary/20">
                 <GraduationCap className="w-8 h-8" />
               </div>
-              <span className="text-3xl font-black tracking-tighter">Surya Academy</span>
+              <span className="text-2xl sm:text-3xl font-black tracking-tighter">Surya Academy</span>
             </Link>
             <p className="text-lg leading-relaxed max-w-sm">
               Shaping future-ready leaders through a unique blend of academic excellence and emotional intelligence.
@@ -72,7 +72,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-4">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <p className="text-sm font-bold">admissions@suryaacademy.com</p>
+                <p className="text-sm font-bold break-all sm:break-normal">admissions@suryaacademy.com</p>
               </div>
             </div>
           </div>

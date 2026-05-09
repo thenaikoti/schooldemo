@@ -52,7 +52,7 @@ const reasons = [
 export function TrustSection() {
   return (
     <SectionWrapper id="trust" className="bg-neutral-50">
-      <div className="flex flex-col lg:flex-row gap-20 items-start">
+      <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
         <div className="lg:w-1/3 lg:sticky lg:top-32">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -69,7 +69,7 @@ export function TrustSection() {
           </p>
           <div className="p-6 sm:p-8 rounded-[2rem] bg-white border border-neutral-100 shadow-xl shadow-neutral-200/50">
              <p className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Satisfaction Rate</p>
-             <p className="text-5xl font-black text-neutral-900 mb-2">99.2%</p>
+             <p className="text-4xl sm:text-5xl font-black text-neutral-900 mb-2">99.2%</p>
              <p className="text-sm text-neutral-500 font-medium">Of our parents would recommend us to their friends and family.</p>
           </div>
         </div>

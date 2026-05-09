@@ -37,7 +37,7 @@ import { cn } from "@/lib/utils";
 export function Admissions() {
   return (
     <SectionWrapper className="bg-neutral-50 dark:bg-neutral-900/30">
-      <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-20">
+      <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12 md:mb-20">
         <h2 className="text-3xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-6">
           Simple Admission <span className="text-primary">Process</span>
         </h2>

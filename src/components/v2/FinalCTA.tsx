@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 export function FinalCTA() {
   return (
     <SectionWrapper className="bg-white">
-      <div className="relative p-8 sm:p-12 md:p-24 rounded-[2.5rem] sm:rounded-[4rem] bg-neutral-900 text-white overflow-hidden text-center shadow-2xl">
+      <div className="relative p-6 sm:p-12 md:p-24 rounded-[2.5rem] sm:rounded-[4rem] bg-neutral-900 text-white overflow-hidden text-center shadow-2xl">
         {/* Subtle Background Pattern */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent" />
         

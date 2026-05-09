@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export function ContactForm() {
   return (
     <SectionWrapper id="contact" className="bg-white">
-      <div className="flex flex-col lg:flex-row gap-20 items-center">
+      <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
         {/* Left Content */}
         <div className="lg:w-1/2">
           <motion.div

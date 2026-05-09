@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 export function SmartAdmissions() {
   return (
     <SectionWrapper id="admissions" className="bg-neutral-900 text-white rounded-[2rem] sm:rounded-[4rem] mx-2 sm:mx-4 my-20 overflow-hidden">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -24,7 +24,7 @@ export function SmartAdmissions() {
             A Nurturing <br />
             <span className="text-primary italic">Admissions Experience.</span>
           </h2>
-          <p className="text-xl text-neutral-400 font-medium leading-relaxed mb-12">
+          <p className="text-lg sm:text-xl text-neutral-400 font-medium leading-relaxed mb-8 sm:mb-12">
             We have simplified the admission journey to ensure you spend less time on paperwork and more time planning your child's future.
           </p>
 
@@ -54,12 +54,12 @@ export function SmartAdmissions() {
 
           <div className="flex flex-col sm:flex-row gap-6">
             <Link href="/admissions" passHref legacyBehavior>
-              <Button size="lg" className="h-16 px-10 text-lg shadow-2xl shadow-primary/20">
+              <Button size="lg" className="h-14 sm:h-16 px-8 sm:px-10 text-base sm:text-lg shadow-2xl shadow-primary/20">
                 Apply Now
               </Button>
             </Link>
             <Link href="/contact" passHref legacyBehavior>
-              <Button variant="outline" size="lg" className="h-16 px-10 text-lg border-white/10 hover:bg-white hover:text-neutral-900">
+              <Button variant="outline" size="lg" className="h-14 sm:h-16 px-8 sm:px-10 text-base sm:text-lg border-white/10 hover:bg-white hover:text-neutral-900">
                 Inquire via WhatsApp
               </Button>
             </Link>
@@ -68,7 +68,7 @@ export function SmartAdmissions() {
 
         <div className="relative">
           {/* Subtle Visual of a Chat interface or a modern app */}
-          <div className="relative aspect-square md:aspect-[4/5] lg:aspect-square xl:aspect-[4/5] bg-neutral-800 rounded-[3rem] border border-white/10 overflow-hidden shadow-2xl group">
+          <div className="relative aspect-square md:aspect-[4/5] lg:aspect-square xl:aspect-[4/5] bg-neutral-800 rounded-[2rem] sm:rounded-[3rem] border border-white/10 overflow-hidden shadow-2xl group">
              {/* Mock AI Chat Interface */}
              <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10" />
              <div className="p-6 sm:p-10 h-full flex flex-col">
