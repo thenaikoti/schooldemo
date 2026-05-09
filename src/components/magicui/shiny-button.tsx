@@ -27,7 +27,7 @@ const animationProps = {
 
 export const ShinyButton = React.forwardRef<
   HTMLButtonElement,
-  HTMLMotionProps<"button"> & { className?: string }
+  HTMLMotionProps<"button"> & { children?: React.ReactNode; className?: string }
 >(({ children, className, ...props }, ref) => {
   return (
     <motion.button
