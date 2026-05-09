@@ -4,6 +4,7 @@ import { SectionWrapper } from "./SectionWrapper";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Camera, Music, Trophy, Users } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const activities = [
   { id: 1, src: "/images/annual_sports_day_event_1776796621655.png", title: "Sports Day", span: "row-span-2 col-span-2" },
@@ -42,7 +43,7 @@ export function StudentLife() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-[800px]">
+      <div className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-4 md:gap-6 h-[800px] sm:h-[1000px] md:h-[800px]">
         {activities.map((item, i) => (
           <motion.div
             key={item.id}
@@ -50,7 +51,10 @@ export function StudentLife() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className={`relative rounded-[2.5rem] overflow-hidden group bg-neutral-100 ${item.span}`}
+            className={cn(
+              "relative rounded-[1.5rem] sm:rounded-[2.5rem] overflow-hidden group bg-neutral-100",
+              item.span
+            )}
           >
             <Image
               src={item.src}
@@ -58,9 +62,9 @@ export function StudentLife() {
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
-              <h4 className="text-2xl font-black text-white tracking-tight">{item.title}</h4>
-              <p className="text-white/70 font-medium text-sm mt-2">Discover more →</p>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 sm:p-10">
+              <h4 className="text-xl sm:text-2xl font-black text-white tracking-tight">{item.title}</h4>
+              <p className="text-white/70 font-medium text-xs sm:text-sm mt-1 sm:mt-2">Discover more →</p>
             </div>
           </motion.div>
         ))}

@@ -48,7 +48,7 @@ export function Testimonials() {
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
           >
-            <Card className="h-full p-10 bg-neutral-50 border-neutral-100 flex flex-col hover:bg-white transition-all duration-500">
+            <Card className="h-full p-6 sm:p-10 bg-neutral-50 border-neutral-100 flex flex-col hover:bg-white transition-all duration-500">
               <div className="flex gap-1 mb-8">
                 {[...Array(test.rating)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-primary text-primary" />

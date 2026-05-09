@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 export function FinalCTA() {
   return (
     <SectionWrapper className="bg-white">
-      <div className="relative p-12 md:p-24 rounded-[4rem] bg-neutral-900 text-white overflow-hidden text-center shadow-2xl">
+      <div className="relative p-8 sm:p-12 md:p-24 rounded-[2.5rem] sm:rounded-[4rem] bg-neutral-900 text-white overflow-hidden text-center shadow-2xl">
         {/* Subtle Background Pattern */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent" />
         
@@ -17,7 +17,7 @@ export function FinalCTA() {
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-8xl font-black mb-10 leading-[0.95] tracking-tight"
+            className="text-4xl sm:text-5xl md:text-8xl font-black mb-10 leading-[1.1] md:leading-[0.95] tracking-tight"
           >
             Shape Your Child’s <br />
             <span className="text-primary italic">Future With Confidence.</span>
@@ -39,13 +39,13 @@ export function FinalCTA() {
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
               <Link href="/admissions" passHref legacyBehavior>
-                <Button size="lg" className="w-full sm:w-auto h-20 px-14 text-xl font-black group rounded-3xl shadow-2xl shadow-primary/30">
+                <Button size="lg" className="w-full sm:w-auto h-16 sm:h-20 px-8 sm:px-14 text-lg sm:text-xl font-black group rounded-3xl shadow-2xl shadow-primary/30">
                   Apply for 2026-27
                   <ArrowRight className="w-6 h-6 ml-2 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
               <Link href="/contact" passHref legacyBehavior>
-                <Button variant="outline" size="lg" className="w-full sm:w-auto h-20 px-14 text-xl font-black border-white/10 hover:bg-white hover:text-neutral-900 group rounded-3xl">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto h-16 sm:h-20 px-8 sm:px-14 text-lg sm:text-xl font-black border-white/10 hover:bg-white hover:text-neutral-900 group rounded-3xl">
                   <Calendar className="w-6 h-6 mr-3 transition-transform group-hover:scale-110" />
                   Book Campus Visit
                 </Button>

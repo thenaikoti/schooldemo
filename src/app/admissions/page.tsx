@@ -67,7 +67,7 @@ export default function AdmissionsPage() {
                   { event: "First Selection List", date: "Dec 10th, 2025", icon: FileText },
                   { event: "New Session Starts", date: "April 5th, 2026", icon: CheckCircle2 },
                 ].map((item, i) => (
-                  <Card key={item.event} className="p-8 border-none bg-neutral-50 dark:bg-neutral-900/50 hover:bg-white dark:hover:bg-neutral-900 shadow-sm hover:shadow-xl transition-all duration-500">
+                  <Card key={item.event} className="p-6 sm:p-8 border-none bg-neutral-50 dark:bg-neutral-900/50 hover:bg-white dark:hover:bg-neutral-900 shadow-sm hover:shadow-xl transition-all duration-500">
                      <item.icon className="text-primary w-6 h-6 mb-4" />
                      <p className="text-xs uppercase tracking-widest font-black text-neutral-400 mb-2">{item.event}</p>
                      <p className="text-xl font-black text-neutral-900 dark:text-white tracking-tight">{item.date}</p>
@@ -76,7 +76,7 @@ export default function AdmissionsPage() {
               </div>
             </div>
 
-            <div className="p-8 rounded-[2.5rem] bg-amber-500 text-white shadow-2xl relative overflow-hidden">
+            <div className="p-6 sm:p-8 rounded-[2.5rem] bg-amber-500 text-white shadow-2xl relative overflow-hidden">
                <div className="absolute top-0 right-0 p-10 opacity-20 pointer-events-none">
                  <AlertCircle className="w-24 h-24" />
                </div>
@@ -103,8 +103,8 @@ export default function AdmissionsPage() {
               { q: "What is the teacher-student ratio?", a: "For Pre-Primary, we maintain a 1:15 ratio, and for higher classes, it's 1:25." },
               { q: "Are there scholarships for meritorious students?", a: "Yes, we offer partial and full scholarships to students who excel in academics or sports." }
             ].map((faq, i) => (
-              <AccordionItem key={i} value={`item-${i}`} className="border-none px-8 py-2 rounded-[1.5rem] bg-white dark:bg-neutral-900 shadow-sm">
-                <AccordionTrigger className="text-left font-black text-xl py-6 hover:no-underline tracking-tight">
+              <AccordionItem key={i} value={`item-${i}`} className="border-none px-4 sm:px-8 py-2 rounded-[1.5rem] bg-white dark:bg-neutral-900 shadow-sm">
+                <AccordionTrigger className="text-left font-black text-lg sm:text-xl py-6 hover:no-underline tracking-tight">
                   {faq.q}
                 </AccordionTrigger>
                 <AccordionContent className="text-neutral-600 dark:text-neutral-400 text-lg font-medium leading-relaxed pb-6">

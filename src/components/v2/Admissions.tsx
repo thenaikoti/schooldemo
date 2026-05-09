@@ -63,7 +63,7 @@ export function Admissions() {
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className={cn("w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-xl mb-8 relative shrink-0", step.color)}
+                    className={cn("w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-xl lg:mb-8 relative shrink-0", step.color)}
                   >
                     <Icon className="w-8 h-8" />
                     <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-white dark:bg-neutral-950 border-4 border-neutral-50 dark:border-neutral-900 flex items-center justify-center text-neutral-900 dark:text-white font-bold text-sm shadow-md">

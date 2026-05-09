@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export function SmartAdmissions() {
   return (
-    <SectionWrapper id="admissions" className="bg-neutral-900 text-white rounded-[4rem] mx-4 my-20 overflow-hidden">
+    <SectionWrapper id="admissions" className="bg-neutral-900 text-white rounded-[2rem] sm:rounded-[4rem] mx-2 sm:mx-4 my-20 overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <div>
           <motion.div
@@ -71,7 +71,7 @@ export function SmartAdmissions() {
           <div className="relative aspect-square md:aspect-[4/5] lg:aspect-square xl:aspect-[4/5] bg-neutral-800 rounded-[3rem] border border-white/10 overflow-hidden shadow-2xl group">
              {/* Mock AI Chat Interface */}
              <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10" />
-             <div className="p-10 h-full flex flex-col">
+             <div className="p-6 sm:p-10 h-full flex flex-col">
                <div className="flex items-center gap-4 mb-10 pb-6 border-b border-white/5">
                  <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
                    <Sparkles className="w-6 h-6 text-white" />
@@ -83,13 +83,13 @@ export function SmartAdmissions() {
                </div>
 
                <div className="space-y-6 flex-1">
-                 <div className="bg-white/5 p-6 rounded-[2rem] rounded-tl-none border border-white/5 max-w-[85%]">
+                 <div className="bg-white/5 p-4 sm:p-6 rounded-[2rem] rounded-tl-none border border-white/5 max-w-[85%]">
                     <p className="text-sm font-medium leading-relaxed">"Hello! I can help you with fee structures, admission dates, or booking a campus visit. What would you like to know?"</p>
                  </div>
-                 <div className="bg-primary p-6 rounded-[2rem] rounded-tr-none ml-auto max-w-[85%]">
+                 <div className="bg-primary p-4 sm:p-6 rounded-[2rem] rounded-tr-none ml-auto max-w-[85%]">
                     <p className="text-sm font-medium leading-relaxed text-white">"What are the documents required for Grade 1?"</p>
                  </div>
-                 <div className="bg-white/5 p-6 rounded-[2rem] rounded-tl-none border border-white/5 max-w-[85%]">
+                 <div className="bg-white/5 p-4 sm:p-6 rounded-[2rem] rounded-tl-none border border-white/5 max-w-[85%]">
                     <p className="text-sm font-medium leading-relaxed">"For Grade 1, we require: 1. Birth Certificate, 2. Transfer Certificate, 3. Previous 2 years academic records. Would you like me to email a checklist?"</p>
                  </div>
                </div>
